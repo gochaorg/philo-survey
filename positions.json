@@ -35,7 +35,15 @@
     { "id": "individualism", "section": "social", "label": "Индивидуализм / Либертарианство", "desc": "Права и свобода отдельной личности превыше интересов общества." },
     { "id": "collectivism", "section": "social", "label": "Коллективизм / Коммунитаризм", "desc": "Интересы и благо общества важнее эгоистичных прав индивида." },
     { "id": "epistocracy", "section": "social", "label": "Эпистократия / Технократия", "desc": "Управлять государством должны только компетентные эксперты и ученые." },
-    { "id": "democratism", "section": "social", "label": "Демократизм", "desc": "Все граждане имеют равное право влиять на власть, независимо от знаний." }
+    { "id": "democratism", "section": "social", "label": "Демократизм", "desc": "Все граждане имеют равное право влиять на власть, независимо от знаний." },
+
+    { "id": "constructivism_values", "section": "values", "label": "Конструктивизм / Гуманизм", "desc": "Ценности создаются людьми, но от этого они не фикция, а основа общества." },
+    { "id": "virtue_ethics", "section": "ethics", "label": "Этика добродетели", "desc": "Мораль в развитии личных качеств и характера, а не в следовании правилам или расчете пользы." },
+    { "id": "coherence_truth", "section": "truth", "label": "Когерентная истина", "desc": "Истина — это логическая согласованность высказывания с общей системой знаний." },
+    { "id": "psychologism_logic", "section": "logic", "label": "Психологизм", "desc": "Законы логики — продукт когнитивных процессов мозга, а не абсолютные правила вселенной." },
+    { "id": "aesthetic_objectivism", "section": "aesthetics", "label": "Объективизм в эстетике", "desc": "Красота — объективное свойство реальности (гармония, симметрия)." },
+    { "id": "aesthetic_subjectivism", "section": "aesthetics", "label": "Субъективизм в эстетике", "desc": "Красота — исключительно дело личного вкуса и чувственного опыта." },
+    { "id": "aesthetic_constructivism", "section": "aesthetics", "label": "Институциональная эстетика", "desc": "Прекрасное определяется культурным контекстом и договоренностями мира искусства." }
   ],
   "links": [
     { "source": "materialism", "target": "idealism", "weight": -1.0, "note": "Главное онтологическое противоречие" },
@@ -71,9 +79,21 @@
     { "source": "scientism", "target": "relativism_truth", "weight": -0.9 },
 
     { "source": "correspondence_truth", "target": "relativism_truth", "weight": -1.0 },
+    { "source": "coherence_truth", "target": "rationalism", "weight": 0.9 },
+    { "source": "coherence_truth", "target": "classical_logic", "weight": 0.9 },
+    { "source": "coherence_truth", "target": "correspondence_truth", "weight": -0.7 },
+    { "source": "coherence_truth", "target": "pragmatic_truth", "weight": -0.4 },
+
     { "source": "pragmatic_truth", "target": "utilitarianism", "weight": 0.7, "note": "Истинно то, что полезно; морально то, что полезно" },
+    { "source": "pragmatic_truth", "target": "constructivism_values", "weight": 0.6 },
 
     { "source": "classical_logic", "target": "logic_constructivism", "weight": -1.0 },
+
+    { "source": "psychologism_logic", "target": "classical_logic", "weight": -0.8 },
+    { "source": "psychologism_logic", "target": "logic_constructivism", "weight": -0.6 },
+    { "source": "psychologism_logic", "target": "empirism", "weight": 0.9 },
+    { "source": "psychologism_logic", "target": "physicalism", "weight": 0.9 },
+    { "source": "psychologism_logic", "target": "scientism", "weight": 0.8 },
 
     { "source": "physicalism", "target": "dualism_mind", "weight": -1.0 },
     { "source": "physicalism", "target": "hard_determinism", "weight": 0.7 },
@@ -92,11 +112,30 @@
     { "source": "deontology", "target": "value_objectivism", "weight": 0.8 },
 
     { "source": "value_objectivism", "target": "nihilism", "weight": -1.0 },
+    { "source": "value_objectivism", "target": "constructivism_values", "weight": -0.8 },
+    { "source": "nihilism", "target": "constructivism_values", "weight": -0.8 },
     { "source": "nihilism", "target": "relativism_truth", "weight": 0.8 },
+    { "source": "constructivism_values", "target": "utilitarianism", "weight": 0.9 },
+    { "source": "constructivism_values", "target": "deontology", "weight": 0.6 },
+    { "source": "constructivism_values", "target": "relativism_truth", "weight": 0.7 },
 
     { "source": "individualism", "target": "collectivism", "weight": -1.0 },
     { "source": "individualism", "target": "libertarianism_will", "weight": 0.5 },
     
-    { "source": "epistocracy", "target": "democratism", "weight": -1.0 }
+    { "source": "epistocracy", "target": "democratism", "weight": -1.0 },
+
+    { "source": "virtue_ethics", "target": "deontology", "weight": -0.7 },
+    { "source": "virtue_ethics", "target": "utilitarianism", "weight": -0.8 },
+    { "source": "virtue_ethics", "target": "constructivism_values", "weight": 0.8 },
+    { "source": "virtue_ethics", "target": "individualism", "weight": 0.5 },
+
+    { "source": "aesthetic_objectivism", "target": "aesthetic_subjectivism", "weight": -1.0 },
+    { "source": "aesthetic_objectivism", "target": "value_objectivism", "weight": 0.9 },
+    { "source": "aesthetic_objectivism", "target": "platonism", "weight": 0.8 },
+    { "source": "aesthetic_subjectivism", "target": "nihilism", "weight": 0.5 },
+    { "source": "aesthetic_subjectivism", "target": "empirism", "weight": 0.6 },
+    { "source": "aesthetic_constructivism", "target": "logic_constructivism", "weight": 0.8 },
+    { "source": "aesthetic_constructivism", "target": "constructivism_values", "weight": 0.8 },
+    { "source": "aesthetic_constructivism", "target": "nominalism", "weight": 0.4 }
   ]
 }

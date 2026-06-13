@@ -176,7 +176,7 @@ function drawGraph() {
                 highlight: { background: '#2196f3', border: '#0b7dda' }
             },
             // Увеличили размер шрифта для лучшей читаемости
-            font: { color: fontColor, size: 14, strokeWidth: 2, strokeColor: isBeliever ? 'transparent' : '#aabbff' }
+            font: { color: fontColor, size: 14, strokeWidth: 0.5, strokeColor: isBeliever ? 'transparent' : '#aabbff' }
         };
     });
 
