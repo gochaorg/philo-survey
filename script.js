@@ -150,8 +150,9 @@ function displayResults() {
           } else if ( pct < 50 ){
             fg = '#a4d603';
           } else if ( pct < 75 ){
-            fg = '#51379f';
+            fg = '#379f6f';
           } else {
+            fg = '#51379f';
           }
 
           resultLine.innerHTML = 
