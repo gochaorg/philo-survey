@@ -117,7 +117,7 @@ function calculateResults(event) {
     });
 
     // Выводим результаты на экран
-    //displayResults();
+    displayResults();
 
     // Показываем блок результатов и запускаем отрисовку графа
     document.getElementById('results-area').style.display = 'block';
@@ -127,7 +127,7 @@ function calculateResults(event) {
 
 // Рендеринг итоговых процентов соответствия позициям
 function displayResults() {
-    const resultsContainer = document.getElementById('results-container');
+    const resultsContainer = document.getElementById('position-values');
     resultsContainer.innerHTML = '<h2>Ваш философский профиль:</h2>';
 
     for (let position in userScores) {
@@ -139,12 +139,40 @@ function displayResults() {
 
         // Добавляем строку с результатом на страницу
         const resultLine = document.createElement('p');
-        resultLine.innerHTML = `<strong>${position}:</strong> ${pct}% совпадения`;
+
+        let ppos = graphStructure.nodes.find( n => n.id == position );
+        if( ppos ){
+          let fg = '#c80101';
+          if( pct < 10 ){
+            fg = '#e28b00';
+          } else if ( pct < 25 ){
+            fg = '#dac503';
+          } else if ( pct < 50 ){
+            fg = '#a4d603';
+          } else if ( pct < 75 ){
+            fg = '#199001';
+          } else {
+          }
+
+          resultLine.innerHTML = 
+            `<strong style="color: ${fg}">${position}:</strong> ${pct}% совпадения
+              <br/> Секция: ${ppos.section}
+              <br/> Направление: ${ppos.label}
+              Описание: 
+              <br/> ${ppos.desc}              
+            `;
+        }else{
+          resultLine.innerHTML = 
+            `<strong>${position}:</strong> 
+              ${pct}% совпадения
+            `;
+        }
+
         resultsContainer.appendChild(resultLine);
     }
     
     // Прокрутка экрана к результатам
-    resultsContainer.scrollIntoView({ behavior: 'smooth' });
+    //resultsContainer.scrollIntoView({ behavior: 'smooth' });
 }
 
 // ВИЗУАЛИЗАЦИЯ: Отрисовка графа на основе Vis.js
@@ -540,9 +568,8 @@ function createControlButtons() {
         </button>
     `;
 
-    // Вставляем панель перед формой или перед quiz-container
-    const quizContainer = document.getElementById('quiz-container');
-    quizContainer.parentNode.insertBefore(controlPanel, quizContainer);
+    const controlPanelContainer = document.getElementById('controlPanel');
+    controlPanelContainer.appendChild(controlPanel);
 }
 
 // Привязываем функцию подсчета к отправке формы
