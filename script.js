@@ -142,6 +142,7 @@ function displayResults() {
 }
 
 // ВИЗУАЛИЗАЦИЯ: Отрисовка графа на основе Vis.js
+// ВИЗУАЛИЗАЦИЯ: Отрисовка графа на основе Vis.js
 function drawGraph() {
     const container = document.getElementById('network-container');
     
@@ -152,14 +153,16 @@ function drawGraph() {
         pct = Math.max(0, Math.min(100, pct));
         pct = Math.round(pct);
 
-        // Динамический размер узла зависит от набранного процента согласия респондента
-        // Базовый размер 15 (если 0%), максимальный — 45 (при 100% совпадении)
-        const nodeSize = 15 + (pct * 0.3);
+        // Динамический размер узла (базовый 20, максимальный 50)
+        const nodeSize = 20 + (pct * 0.3);
 
-        // Стилизация узла: если респондент склонен к позиции (>50%), красим в зеленый
+        // Стилизация узла в зависимости от согласия респондента (>50%)
         const isBeliever = pct >= 50;
-        const nodeColor = isBeliever ? '#4caf50' : '#cfd8dc';
-        const fontColor = isBeliever ? '#ffffff' : '#37474f';
+        const nodeColor = isBeliever ? '#4caf50' : '#eceff1'; // Насыщенный зеленый или мягкий светло-серый
+        const borderColor = isBeliever ? '#2e7d32' : '#b0bec5';
+        
+        // ИСПРАВЛЕНИЕ: Если узел светлый, текст делаем темно-синим/серым, если зеленый — белым
+        const fontColor = isBeliever ? '#376345' : '#bf99d2'; 
 
         return {
             id: node.id,
@@ -169,25 +172,27 @@ function drawGraph() {
             shape: 'dot',
             color: {
                 background: nodeColor,
-                border: isBeliever ? '#388e3c' : '#b0bec5',
+                border: borderColor,
                 highlight: { background: '#2196f3', border: '#0b7dda' }
             },
-            font: { color: fontColor, size: 14, strokeWidth: 2, strokeColor: '#ffffff' }
+            // Увеличили размер шрифта для лучшей читаемости
+            font: { color: fontColor, size: 14, strokeWidth: 2, strokeColor: isBeliever ? 'transparent' : '#aabbff' }
         };
     });
 
     // 2. Превращаем связи (links) в ребра Vis.js (edges)
     const visEdges = graphStructure.links.map(link => {
-        // Подсвечиваем типы связей: зеленый для совместимости, красный для противоречий
         const isContradictory = link.weight < 0;
-        const edgeColor = isContradictory ? 'rgba(244, 67, 54, 0.25)' : 'rgba(76, 175, 80, 0.25)';
+        // ИСПРАВЛЕНИЕ: Увеличили непрозрачность (с 0.25 до 0.55), чтобы линии были четко видны
+        const edgeColor = isContradictory ? 'rgba(244, 67, 54, 0.55)' : 'rgba(76, 175, 80, 0.55)';
         
         return {
             from: link.source,
             to: link.target,
             color: edgeColor,
-            width: Math.abs(link.weight) * 2, // Толщина ребра зависит от силы связи
-            title: link.note || '' // Текст связи при наведении
+            // ИСПРАВЛЕНИЕ: Сделали базовую толщину 3 пикселя + добавочный вес от силы связи
+            width: 3 + (Math.abs(link.weight) * 3), 
+            title: link.note || '' 
         };
     });
 
@@ -208,9 +213,9 @@ function drawGraph() {
         },
         physics: {
             barnesHut: {
-                gravitationalConstant: -3000, // Сила отталкивания узлов друг от друга
+                gravitationalConstant: -3500, // Чуть сильнее расталкиваем узлы, чтобы текст не накладывался
                 centralGravity: 0.3,
-                springLength: 150, // Длина связей
+                springLength: 160, 
                 springConstant: 0.04
             }
         },
