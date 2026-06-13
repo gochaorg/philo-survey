@@ -1,48 +1,197 @@
 {
   "nodes": [
-    { "id": "materialism", "section": "ontology", "label": "Материализм", "desc": "Мир состоит только из физической материи." },
-    { "id": "idealism", "section": "ontology", "label": "Идеализм", "desc": "Первооснова мира — дух, идеи, сознание или симуляция." },
-    { "id": "nominalism", "section": "ontology", "label": "Номинализм", "desc": "Абстрактные понятия (красота, числа) — лишь имена, созданные человеком." },
-    { "id": "platonism", "section": "ontology", "label": "Платонизм / Реализм", "desc": "Идеи, математика и универсалии существуют объективно." },
-    
-    { "id": "empirism", "section": "epistemology", "label": "Эмпиризм", "desc": "Единственный источник знаний — чувственный опыт и эксперимент." },
-    { "id": "rationalism", "section": "epistemology", "label": "Рационализм", "desc": "Истину можно познать чистым разумом и логикой без опыта." },
-    { "id": "skepticism", "section": "epistemology", "label": "Скептицизм / Агностицизм", "desc": "Мир принципиально непознаваем, истина недостижима." },
-    { "id": "scientism", "section": "epistemology", "label": "Сайентизм", "desc": "Наука — единственный легитимный и высший способ познания." },
-    
-    { "id": "correspondence_truth", "section": "truth", "label": "Корреспондентская истина", "desc": "Истина — это то, что строго соответствует фактам реальности." },
-    { "id": "pragmatic_truth", "section": "truth", "label": "Прагматическая истина", "desc": "Истинно то, что полезно и эффективно работает на практике." },
-    { "id": "relativism_truth", "section": "truth", "label": "Релятивизм истины", "desc": "Объективной истины нет, у каждого своя правда и контекст." },
-    
-    { "id": "classical_logic", "section": "logic", "label": "Классическая логика", "desc": "Законы логики абсолютны, объективны и неизменны." },
-    { "id": "logic_constructivism", "section": "logic", "label": "Конструктивизм / Постмодерн", "desc": "Логика — лишь изобретенный человеком инструмент или языковая игра." },
-    
-    { "id": "physicalism", "section": "mind", "label": "Физикализм / Редукционизм", "desc": "Сознание — это просто электрохимия мозга." },
-    { "id": "dualism_mind", "section": "mind", "label": "Дуализм сознания", "desc": "Сознание имеет нематериальную природу, отличную от тела." },
-    { "id": "functionalism", "section": "mind", "label": "Функционализм (ИИ)", "desc": "ИИ может обладать полноценным сознанием, если копирует его функции." },
-    { "id": "panpsychism", "section": "mind", "label": "Панпсихизм", "desc": "Элементарные частицы обладают базовым свойством чувствовать." },
-    
-    { "id": "hard_determinism", "section": "determinism", "label": "Жесткий детерминизм", "desc": "Все события предопределены законами физики, свободы воли нет." },
-    { "id": "libertarianism_will", "section": "determinism", "label": "Либертарианство воли", "desc": "Человек обладает абсолютной свободой воли, выбор не предопределен." },
-    { "id": "compatibilism", "section": "determinism", "label": "Компатибилизм", "desc": "Свобода воли совместима с детерминизмом (мы свободны, пока действуем без принуждения)." },
-    
-    { "id": "utilitarianism", "section": "ethics", "label": "Утилитаризм", "desc": "Морально то, что приносит максимум пользы большинству." },
-    { "id": "deontology", "section": "ethics", "label": "Деонтология", "desc": "Мораль — это выполнение абсолютного долга и правил (Кант)." },
-    
-    { "id": "value_objectivism", "section": "values", "label": "Объективизм ценностей", "desc": "Добро и зло объективны и существуют независимо от людей." },
-    { "id": "nihilism", "section": "values", "label": "Нигилизм / Субъективизм", "desc": "Ценности выдуманы людьми, объективного смысла и морали нет." },
-    
-    { "id": "individualism", "section": "social", "label": "Индивидуализм / Либертарианство", "desc": "Права и свобода отдельной личности превыше интересов общества." },
-    { "id": "collectivism", "section": "social", "label": "Коллективизм / Коммунитаризм", "desc": "Интересы и благо общества важнее эгоистичных прав индивида." },
-    { "id": "epistocracy", "section": "social", "label": "Эпистократия / Технократия", "desc": "Управлять государством должны только компетентные эксперты и ученые." },
-    { "id": "democratism", "section": "social", "label": "Демократизм", "desc": "Все граждане имеют равное право влиять на власть, независимо от знаний." },
-
-    { "id": "constructivism_values", "section": "values", "label": "Конструктивизм / Гуманизм", "desc": "Ценности создаются людьми, но от этого они не фикция, а основа общества." },
-    { "id": "virtue_ethics", "section": "ethics", "label": "Этика добродетели", "desc": "Мораль в развитии личных качеств и характера, а не в следовании правилам или расчете пользы." },
-    { "id": "coherence_truth", "section": "truth", "label": "Когерентная истина", "desc": "Истина — это логическая согласованность высказывания с общей системой знаний." },
-    { "id": "psychologism_logic", "section": "logic", "label": "Психологизм", "desc": "Законы логики — продукт когнитивных процессов мозга, а не абсолютные правила вселенной." },
-
-
+    {
+      "id": "materialism",
+      "section": "ontology",
+      "label": "Материализм",
+      "desc": "Мир состоит только из физической материи."
+    },
+    {
+      "id": "idealism",
+      "section": "ontology",
+      "label": "Идеализм",
+      "desc": "Первооснова мира — дух, идеи, сознание или симуляция."
+    },
+    {
+      "id": "nominalism",
+      "section": "ontology",
+      "label": "Номинализм",
+      "desc": "Абстрактные понятия (красота, числа) — лишь имена, созданные человеком."
+    },
+    {
+      "id": "platonism",
+      "section": "ontology",
+      "label": "Платонизм / Реализм",
+      "desc": "Идеи, математика и универсалии существуют объективно."
+    },
+    {
+      "id": "empirism",
+      "section": "epistemology",
+      "label": "Эмпиризм",
+      "desc": "Единственный источник знаний — чувственный опыт и эксперимент."
+    },
+    {
+      "id": "rationalism",
+      "section": "epistemology",
+      "label": "Рационализм",
+      "desc": "Истину можно познать чистым разумом и логикой без опыта."
+    },
+    {
+      "id": "skepticism",
+      "section": "epistemology",
+      "label": "Скептицизм / Агностицизм",
+      "desc": "Мир принципиально непознаваем, истина недостижима."
+    },
+    {
+      "id": "scientism",
+      "section": "epistemology",
+      "label": "Сайентизм",
+      "desc": "Наука — единственный легитимный и высший способ познания."
+    },
+    {
+      "id": "correspondence_truth",
+      "section": "truth",
+      "label": "Корреспондентская истина",
+      "desc": "Истина — это то, что строго соответствует фактам реальности."
+    },
+    {
+      "id": "pragmatic_truth",
+      "section": "truth",
+      "label": "Прагматическая истина",
+      "desc": "Истинно то, что полезно и эффективно работает на практике."
+    },
+    {
+      "id": "relativism_truth",
+      "section": "truth",
+      "label": "Релятивизм истины",
+      "desc": "Объективной истины нет, у каждого своя правда и контекст."
+    },
+    {
+      "id": "classical_logic",
+      "section": "logic",
+      "label": "Классическая логика",
+      "desc": "Законы логики абсолютны, объективны и неизменны."
+    },
+    {
+      "id": "logic_constructivism",
+      "section": "logic",
+      "label": "Конструктивизм / Постмодерн",
+      "desc": "Логика — лишь изобретенный человеком инструмент или языковая игра."
+    },
+    {
+      "id": "physicalism",
+      "section": "mind",
+      "label": "Физикализм / Редукционизм",
+      "desc": "Сознание — это просто электрохимия мозга."
+    },
+    {
+      "id": "dualism_mind",
+      "section": "mind",
+      "label": "Дуализм сознания",
+      "desc": "Сознание имеет нематериальную природу, отличную от тела."
+    },
+    {
+      "id": "functionalism",
+      "section": "mind",
+      "label": "Функционализм (ИИ)",
+      "desc": "ИИ может обладать полноценным сознанием, если копирует его функции."
+    },
+    {
+      "id": "panpsychism",
+      "section": "mind",
+      "label": "Панпсихизм",
+      "desc": "Элементарные частицы обладают базовым свойством чувствовать."
+    },
+    {
+      "id": "hard_determinism",
+      "section": "determinism",
+      "label": "Жесткий детерминизм",
+      "desc": "Все события предопределены законами физики, свободы воли нет."
+    },
+    {
+      "id": "libertarianism_will",
+      "section": "determinism",
+      "label": "Либертарианство воли",
+      "desc": "Человек обладает абсолютной свободой воли, выбор не предопределен."
+    },
+    {
+      "id": "compatibilism",
+      "section": "determinism",
+      "label": "Компатибилизм",
+      "desc": "Свобода воли совместима с детерминизмом (мы свободны, пока действуем без принуждения)."
+    },
+    {
+      "id": "utilitarianism",
+      "section": "ethics",
+      "label": "Утилитаризм",
+      "desc": "Морально то, что приносит максимум пользы большинству."
+    },
+    {
+      "id": "deontology",
+      "section": "ethics",
+      "label": "Деонтология",
+      "desc": "Мораль — это выполнение абсолютного долга и правил (Кант)."
+    },
+    {
+      "id": "value_objectivism",
+      "section": "values",
+      "label": "Объективизм ценностей",
+      "desc": "Добро и зло объективны и существуют независимо от людей."
+    },
+    {
+      "id": "nihilism",
+      "section": "values",
+      "label": "Нигилизм / Субъективизм",
+      "desc": "Ценности выдуманы людьми, объективного смысла и морали нет."
+    },
+    {
+      "id": "individualism",
+      "section": "social",
+      "label": "Индивидуализм / Либертарианство",
+      "desc": "Права и свобода отдельной личности превыше интересов общества."
+    },
+    {
+      "id": "collectivism",
+      "section": "social",
+      "label": "Коллективизм / Коммунитаризм",
+      "desc": "Интересы и благо общества важнее эгоистичных прав индивида."
+    },
+    {
+      "id": "epistocracy",
+      "section": "social",
+      "label": "Эпистократия / Технократия",
+      "desc": "Управлять государством должны только компетентные эксперты и ученые."
+    },
+    {
+      "id": "democratism",
+      "section": "social",
+      "label": "Демократизм",
+      "desc": "Все граждане имеют равное право влиять на власть, независимо от знаний."
+    },
+    {
+      "id": "constructivism_values",
+      "section": "values",
+      "label": "Конструктивизм / Гуманизм",
+      "desc": "Ценности создаются людьми, но от этого они не фикция, а основа общества."
+    },
+    {
+      "id": "virtue_ethics",
+      "section": "ethics",
+      "label": "Этика добродетели",
+      "desc": "Мораль в развитии личных качеств и характера, а не в следовании правилам или расчете пользы."
+    },
+    {
+      "id": "coherence_truth",
+      "section": "truth",
+      "label": "Когерентная истина",
+      "desc": "Истина — это логическая согласованность высказывания с общей системой знаний."
+    },
+    {
+      "id": "psychologism_logic",
+      "section": "logic",
+      "label": "Психологизм",
+      "desc": "Законы логики — продукт когнитивных процессов мозга, а не абсолютные правила вселенной."
+    },
     {
       "id": "aesthetic_objectivism",
       "section": "aesthetics",
@@ -73,7 +222,6 @@
       "label": "Семиотическая эстетика",
       "desc": "Произведение — знаковая система. Красота — в глубине интерпретации, в диалоге культурных кодов и смыслов."
     },
-
     {
       "id": "linguistic_universalism",
       "section": "language",
@@ -92,7 +240,6 @@
       "label": "Структурализм / Постструктурализм",
       "desc": "Язык — самодостаточная система знаков; значения рождаются из различий, а не из связи с реальностью."
     },
-
     {
       "id": "personalist_truth",
       "section": "religion",
@@ -131,165 +278,814 @@
     }
   ],
   "links": [
-    { "source": "materialism", "target": "idealism", "weight": -1.0, "note": "Главное онтологическое противоречие" },
-    { "source": "materialism", "target": "physicalism", "weight": 1.0, "note": "Физика ума прямо следует из материализма" },
-    { "source": "materialism", "target": "empirism", "weight": 0.7 },
-    { "source": "materialism", "target": "hard_determinism", "weight": 0.8, "note": "Материальный мир подчинен законам физики" },
-    { "source": "materialism", "target": "panpsychism", "weight": -0.6 },
-
-    { "source": "idealism", "target": "dualism_mind", "weight": 0.8 },
-    { "source": "idealism", "target": "rationalism", "weight": 0.6 },
-    { "source": "idealism", "target": "value_objectivism", "weight": 0.6, "note": "Часто связано через религиозный или абсолютный базис" },
-    { "source": "idealism", "target": "physicalism", "weight": -1.0 },
-
-    { "source": "nominalism", "target": "platonism", "weight": -1.0, "note": "Спор об абстрактных объектах" },
-    { "source": "nominalism", "target": "empirism", "weight": 0.6 },
-    { "source": "platonism", "target": "rationalism", "weight": 0.7, "note": "Математические истины постигаются разумом" },
-    { "source": "platonism", "target": "classical_logic", "weight": 0.8 },
-
-    { "source": "empirism", "target": "rationalism", "weight": -0.6, "note": "Классический спор об источнике знаний" },
-    { "source": "empirism", "target": "scientism", "weight": 0.8 },
-    { "source": "empirism", "target": "correspondence_truth", "weight": 0.7 },
-
-    { "source": "rationalism", "target": "classical_logic", "weight": 0.9 },
-    { "source": "rationalism", "target": "deontology", "weight": 0.7, "note": "Этика Канта выведена логически" },
-
-    { "source": "skepticism", "target": "scientism", "weight": -0.8 },
-    { "source": "skepticism", "target": "relativism_truth", "weight": 0.9 },
-    { "source": "skepticism", "target": "nihilism", "weight": 0.8 },
-    { "source": "skepticism", "target": "correspondence_truth", "weight": -0.7 },
-
-    { "source": "scientism", "target": "physicalism", "weight": 0.8 },
-    { "source": "scientism", "target": "epistocracy", "weight": 0.6, "note": "Тяга к власти экспертов-ученых" },
-    { "source": "scientism", "target": "relativism_truth", "weight": -0.9 },
-
-    { "source": "correspondence_truth", "target": "relativism_truth", "weight": -1.0 },
-    { "source": "coherence_truth", "target": "rationalism", "weight": 0.9 },
-    { "source": "coherence_truth", "target": "classical_logic", "weight": 0.9 },
-    { "source": "coherence_truth", "target": "correspondence_truth", "weight": -0.7 },
-    { "source": "coherence_truth", "target": "pragmatic_truth", "weight": -0.4 },
-
-    { "source": "pragmatic_truth", "target": "utilitarianism", "weight": 0.7, "note": "Истинно то, что полезно; морально то, что полезно" },
-    { "source": "pragmatic_truth", "target": "constructivism_values", "weight": 0.6 },
-
-    { "source": "classical_logic", "target": "logic_constructivism", "weight": -1.0 },
-
-    { "source": "psychologism_logic", "target": "classical_logic", "weight": -0.8 },
-    { "source": "psychologism_logic", "target": "logic_constructivism", "weight": -0.6 },
-    { "source": "psychologism_logic", "target": "empirism", "weight": 0.9 },
-    { "source": "psychologism_logic", "target": "physicalism", "weight": 0.9 },
-    { "source": "psychologism_logic", "target": "scientism", "weight": 0.8 },
-
-    { "source": "physicalism", "target": "dualism_mind", "weight": -1.0 },
-    { "source": "physicalism", "target": "hard_determinism", "weight": 0.7 },
-    { "source": "physicalism", "target": "functionalism", "weight": 0.6, "note": "Код на кремнии может заменить нейроны" },
-
-    { "source": "dualism_mind", "target": "functionalism", "weight": -0.8, "note": "Душа не копируется симуляцией алгоритмов" },
-    { "source": "dualism_mind", "target": "libertarianism_will", "weight": 0.8, "note": "Нематериальное Я свободно от физических оков" },
-
-    { "source": "hard_determinism", "target": "libertarianism_will", "weight": -1.0, "note": "Главное противоречие свободы воли" },
-    { "source": "hard_determinism", "target": "compatibilism", "weight": -0.5 },
-    { "source": "libertarianism_will", "target": "compatibilism", "weight": -0.5 },
-    { "source": "hard_determinism", "target": "deontology", "weight": -0.7, "note": "Нельзя винить за неисполнение долга, если нет выбора" },
-
-    { "source": "utilitarianism", "target": "deontology", "weight": -0.9, "note": "Спор о слепом следовании правилам против оценки последствий" },
-    { "source": "utilitarianism", "target": "collectivism", "weight": 0.6, "note": "Благо большинства важнее блага единиц" },
-    { "source": "deontology", "target": "value_objectivism", "weight": 0.8 },
-
-    { "source": "value_objectivism", "target": "nihilism", "weight": -1.0 },
-    { "source": "value_objectivism", "target": "constructivism_values", "weight": -0.8 },
-    { "source": "nihilism", "target": "constructivism_values", "weight": -0.8 },
-    { "source": "nihilism", "target": "relativism_truth", "weight": 0.8 },
-    { "source": "constructivism_values", "target": "utilitarianism", "weight": 0.9 },
-    { "source": "constructivism_values", "target": "deontology", "weight": 0.6 },
-    { "source": "constructivism_values", "target": "relativism_truth", "weight": 0.7 },
-
-    { "source": "individualism", "target": "collectivism", "weight": -1.0 },
-    { "source": "individualism", "target": "libertarianism_will", "weight": 0.5 },
-    
-    { "source": "epistocracy", "target": "democratism", "weight": -1.0 },
-
-    { "source": "virtue_ethics", "target": "deontology", "weight": -0.7 },
-    { "source": "virtue_ethics", "target": "utilitarianism", "weight": -0.8 },
-    { "source": "virtue_ethics", "target": "constructivism_values", "weight": 0.8 },
-    { "source": "virtue_ethics", "target": "individualism", "weight": 0.5 },
-
-    { "source": "aesthetic_objectivism", "target": "aesthetic_hedonism", "weight": -1.0, "note": "Объективная форма vs субъективное удовольствие" },
-    { "source": "aesthetic_objectivism", "target": "aesthetic_emotivism", "weight": -0.8, "note": "Форма vs проекция эмоций" },
-    { "source": "aesthetic_objectivism", "target": "aesthetic_constructivism", "weight": -0.4, "note": "Объективность vs институциональная условность" },
-    { "source": "aesthetic_objectivism", "target": "semiotic_aesthetics", "weight": -0.5, "note": "Форма vs интерпретация знаков" },
-    { "source": "aesthetic_objectivism", "target": "value_objectivism", "weight": 0.9, "note": "Красота как объективная ценность" },
-    { "source": "aesthetic_objectivism", "target": "platonism", "weight": 0.8, "note": "Прекрасное как эйдос" },
-    { "source": "aesthetic_objectivism", "target": "classical_logic", "weight": 0.4, "note": "Абсолютные законы формы" },
-
-    { "source": "aesthetic_hedonism", "target": "aesthetic_emotivism", "weight": 0.6, "note": "Обе позиции ставят субъекта в центр, но гедонизм телеснее" },
-    { "source": "aesthetic_hedonism", "target": "aesthetic_constructivism", "weight": -0.6, "note": "Личное удовольствие vs диктат институций" },
-    { "source": "aesthetic_hedonism", "target": "semiotic_aesthetics", "weight": -0.6, "note": "Поверхностное удовольствие vs глубина интерпретации" },
-    { "source": "aesthetic_hedonism", "target": "empirism", "weight": 0.9, "note": "Красота познаётся через чувственный опыт" },
-    { "source": "aesthetic_hedonism", "target": "nihilism", "weight": 0.5, "note": "Если всё сводится к удовольствию, объективные ценности размываются" },
-    { "source": "aesthetic_hedonism", "target": "relativism_truth", "weight": 0.6, "note": "У каждого свой вкус — нет единой истины" },
-
-    { "source": "aesthetic_emotivism", "target": "aesthetic_constructivism", "weight": -0.3, "note": "Эмоции vs социальные конструкции" },
-    { "source": "aesthetic_emotivism", "target": "semiotic_aesthetics", "weight": 0.2, "note": "Эмоция может быть результатом прочтения знаков, но фокус разный" },
-    { "source": "aesthetic_emotivism", "target": "idealism", "weight": 0.6, "note": "Акцент на внутреннем мире сознания" },
-    { "source": "aesthetic_emotivism", "target": "dualism_mind", "weight": 0.3, "note": "Чувства как нематериальная сфера" },
-    { "source": "aesthetic_emotivism", "target": "nihilism", "weight": -0.3, "note": "Эмотивизм не обязательно отрицает ценности, он их субъективирует" },
-
-    { "source": "semiotic_aesthetics", "target": "aesthetic_constructivism", "weight": 0.7, "note": "Институции создают и транслируют коды" },
-    { "source": "semiotic_aesthetics", "target": "logic_constructivism", "weight": 0.9, "note": "Язык, знаки, правила игры — всё socially constructed" },
-    { "source": "semiotic_aesthetics", "target": "nominalism", "weight": 0.6, "note": "Абстрактные понятия как имена в системе знаков" },
-    { "source": "semiotic_aesthetics", "target": "constructivism_values", "weight": 0.8, "note": "Ценности создаются и интерпретируются сообществами" },
-    { "source": "semiotic_aesthetics", "target": "relativism_truth", "weight": 0.4, "note": "Множественность интерпретаций" },
-
-    { "source": "aesthetic_constructivism", "target": "logic_constructivism", "weight": 0.8, "note": "Правила искусства — как языковая игра" },
-    { "source": "aesthetic_constructivism", "target": "constructivism_values", "weight": 0.8, "note": "Искусство — социально сконструированная ценность" },
-    { "source": "aesthetic_constructivism", "target": "nominalism", "weight": 0.4, "note": "Ярлык «искусство» конвенционален" },
-    { "source": "aesthetic_constructivism", "target": "nihilism", "weight": -0.4, "note": "Конструктивизм придаёт ценность договорённостям, нигилизм отрицает" },
-
-    { "source": "linguistic_universalism", "target": "linguistic_relativism", "weight": -1.0 },
-    { "source": "linguistic_universalism", "target": "linguistic_structuralism", "weight": -0.8 },
-    { "source": "linguistic_relativism", "target": "linguistic_structuralism", "weight": -0.5 },
-    { "source": "linguistic_universalism", "target": "rationalism", "weight": 0.8 },
-    { "source": "linguistic_universalism", "target": "classical_logic", "weight": 0.7 },
-    { "source": "linguistic_universalism", "target": "platonism", "weight": 0.6 },
-    { "source": "linguistic_relativism", "target": "relativism_truth", "weight": 0.8 },
-    { "source": "linguistic_relativism", "target": "nominalism", "weight": 0.7 },
-    { "source": "linguistic_relativism", "target": "logic_constructivism", "weight": 0.6 },
-    { "source": "linguistic_relativism", "target": "empirism", "weight": 0.6 },
-    { "source": "linguistic_structuralism", "target": "logic_constructivism", "weight": 0.9 },
-    { "source": "linguistic_structuralism", "target": "nominalism", "weight": 0.8 },
-    { "source": "linguistic_structuralism", "target": "semiotic_aesthetics", "weight": 0.8 },
-    { "source": "linguistic_structuralism", "target": "constructivism_values", "weight": 0.8 },
-
-    { "source": "personalist_truth", "target": "correspondence_truth", "weight": -0.8 },
-    { "source": "personalist_truth", "target": "coherence_truth", "weight": -0.7 },
-    { "source": "personalist_truth", "target": "fideism", "weight": 0.9 },
-    { "source": "personalist_truth", "target": "personalist_faith", "weight": 0.9 },
-    { "source": "personalist_truth", "target": "idealism", "weight": 0.5 },
-
-    { "source": "fideism", "target": "theological_rationalism", "weight": -0.9 },
-    { "source": "fideism", "target": "skepticism", "weight": 0.7 },
-    { "source": "fideism", "target": "rationalism", "weight": -0.8 },
-    { "source": "fideism", "target": "personalist_truth", "weight": 0.7 },
-    { "source": "fideism", "target": "personalist_faith", "weight": 0.6 },
-
-    { "source": "theological_rationalism", "target": "rationalism", "weight": 0.8 },
-    { "source": "theological_rationalism", "target": "classical_logic", "weight": 0.5 },
-    { "source": "theological_rationalism", "target": "scientism", "weight": -0.6 },
-    { "source": "theological_rationalism", "target": "value_objectivism", "weight": 0.6 },
-    { "source": "theological_rationalism", "target": "fideism", "weight": -0.9 },
-
-    { "source": "religious_experientialism", "target": "empirism", "weight": 0.7 },
-    { "source": "religious_experientialism", "target": "idealism", "weight": 0.5 },
-    { "source": "religious_experientialism", "target": "scientism", "weight": -0.5 },
-    { "source": "religious_experientialism", "target": "fideism", "weight": 0.4 },
-
-    { "source": "personalist_faith", "target": "worldview_faith", "weight": -0.8 },
-    { "source": "personalist_faith", "target": "personalist_truth", "weight": 0.9 },
-    { "source": "personalist_faith", "target": "fideism", "weight": 0.6 },
-    { "source": "personalist_faith", "target": "individualism", "weight": 0.4 },
-    { "source": "worldview_faith", "target": "constructivism_values", "weight": 0.7 },
-    { "source": "worldview_faith", "target": "logic_constructivism", "weight": 0.5 },
-    { "source": "worldview_faith", "target": "collectivism", "weight": 0.5 }
+    {
+      "source": "materialism",
+      "target": "idealism",
+      "weight": -1.0,
+      "note": "Главное онтологическое противоречие"
+    },
+    {
+      "source": "materialism",
+      "target": "physicalism",
+      "weight": 1.0,
+      "note": "Физика ума прямо следует из материализма"
+    },
+    {
+      "source": "materialism",
+      "target": "empirism",
+      "weight": 0.7,
+      "note": "Материализм опирается на чувственный опыт для познания материального мира"
+    },
+    {
+      "source": "materialism",
+      "target": "hard_determinism",
+      "weight": 0.8,
+      "note": "Материальный мир подчинен законам физики"
+    },
+    {
+      "source": "materialism",
+      "target": "panpsychism",
+      "weight": -0.6,
+       "note": "Материализм отрицает сознание как фундаментальное свойство материи"
+    },
+    {
+      "source": "idealism",
+      "target": "dualism_mind",
+      "weight": 0.8,
+      "note": "Идеализм поддерживает нематериальную природу сознания"
+    },
+    {
+      "source": "idealism",
+      "target": "rationalism",
+      "weight": 0.6
+    },
+    {
+      "source": "idealism",
+      "target": "value_objectivism",
+      "weight": 0.6,
+      "note": "Часто связано через религиозный или абсолютный базис"
+    },
+    {
+      "source": "idealism",
+      "target": "physicalism",
+      "weight": -1.0,
+      "note": "Полное противоречие: физикализм отрицает первичность духа"
+    },
+    {
+      "source": "nominalism",
+      "target": "platonism",
+      "weight": -1.0,
+      "note": "Спор об абстрактных объектах"
+    },
+    {
+      "source": "nominalism",
+      "target": "empirism",
+      "weight": 0.6,
+      "note": "Номинализм хорошо сочетается с опорой на конкретный опыт"
+    },
+    {
+      "source": "platonism",
+      "target": "rationalism",
+      "weight": 0.7,
+      "note": "Математические истины постигаются разумом"
+    },
+    {
+      "source": "platonism",
+      "target": "classical_logic",
+      "weight": 0.8,
+      "note": "Платонизм утверждает объективное существование логических форм"
+    },
+    {
+      "source": "empirism",
+      "target": "rationalism",
+      "weight": -0.6,
+      "note": "Классический спор об источнике знаний"
+    },
+    {
+      "source": "empirism",
+      "target": "scientism",
+      "weight": 0.8,
+      "note": "Сайентизм строится на эмпирическом методе"
+    },
+    {
+      "source": "empirism",
+      "target": "correspondence_truth",
+      "weight": 0.7,
+      "note": "Истина проверяется опытом, что близко эмпиризму"
+    },
+    {
+      "source": "rationalism",
+      "target": "classical_logic",
+      "weight": 0.9,
+      "note": "Рационализм полагает логику главным инструментом разума"
+    },
+    {
+      "source": "rationalism",
+      "target": "deontology",
+      "weight": 0.7,
+      "note": "Этика Канта выведена логически"
+    },
+    {
+      "source": "skepticism",
+      "target": "scientism",
+      "weight": -0.8,
+      "note": "Скептицизм отвергает абсолютную уверенность науки"
+    },
+    {
+      "source": "skepticism",
+      "target": "relativism_truth",
+      "weight": 0.9,
+      "note": "Скептицизм ведёт к отрицанию объективной истины"
+    },
+    {
+      "source": "skepticism",
+      "target": "nihilism",
+      "weight": 0.8,
+       "note": "Сомнение во всём переходит в отрицание ценностей"
+    },
+    {
+      "source": "skepticism",
+      "target": "correspondence_truth",
+      "weight": -0.7,
+       "note": "Скептицизм несовместим с идеей познаваемой объективной истины"
+    },
+    {
+      "source": "scientism",
+      "target": "physicalism",
+      "weight": 0.8,
+      "note": "Наука изучает физическое; физикализм признаёт только физическое"
+    },
+    {
+      "source": "scientism",
+      "target": "epistocracy",
+      "weight": 0.6,
+      "note": "Тяга к власти экспертов-ученых"
+    },
+    {
+      "source": "scientism",
+      "target": "relativism_truth",
+      "weight": -0.9,
+      "note": "Сайентизм утверждает объективность научной истины"
+    },
+    {
+      "source": "correspondence_truth",
+      "target": "relativism_truth",
+      "weight": -1.0,
+      "note": "Прямое противоречие: объективность против субъективности"
+    },
+    {
+      "source": "coherence_truth",
+      "target": "rationalism",
+      "weight": 0.9,
+      "note": "Когерентность требует логической согласованности, важной для рационализма"
+    },
+    {
+      "source": "coherence_truth",
+      "target": "classical_logic",
+      "weight": 0.9,
+      "note": "Логическая непротиворечивость — основа когерентной истины"
+    },
+    {
+      "source": "coherence_truth",
+      "target": "correspondence_truth",
+      "weight": -0.7,
+      "note": "Спор о критерии истины: логика или факты"
+    },
+    {
+      "source": "coherence_truth",
+      "target": "pragmatic_truth",
+      "weight": -0.4,
+      "note": "Истинно то, что полезно; морально то, что полезно"
+    },
+    {
+      "source": "pragmatic_truth",
+      "target": "utilitarianism",
+      "weight": 0.7,
+      "note": "Истинно то, что полезно; морально то, что полезно"
+    },
+    {
+      "source": "pragmatic_truth",
+      "target": "constructivism_values",
+      "weight": 0.6,
+      "note": "Прагматизм и конструктивизм ценностей оба ориентированы на пользу"
+    },
+    {
+      "source": "classical_logic",
+      "target": "logic_constructivism",
+      "weight": -1.0,
+      "note": "Противостояние абсолютной и сконструированной логики"
+    },
+    {
+        "source": "psychologism_logic",
+        "target": "classical_logic",
+        "weight": -0.8,
+        "note": "Психологизм отрицает объективность логики"
+    },
+    {
+        "source": "psychologism_logic",
+        "target": "logic_constructivism",
+        "weight": -0.6,
+        "note": "Психологизм рассматривает логику как биологическую, а не чисто социальную"
+    },
+    {
+        "source": "psychologism_logic",
+        "target": "empirism",
+        "weight": 0.9,
+        "note": "Логика изучается как эмпирический факт работы мозга"
+    },
+    {
+        "source": "psychologism_logic",
+        "target": "physicalism",
+        "weight": 0.9,
+        "note": "Логика как функция мозга — прямое следствие физикализма"
+    },
+    {
+        "source": "psychologism_logic",
+        "target": "scientism",
+        "weight": 0.8,
+        "note": "Наука может изучать логические процессы мозга"
+    },
+    {
+        "source": "psychologism_logic",
+        "target": "linguistic_structuralism",
+        "weight": 0.5,
+        "note": "Структуралистский взгляд на логику как языковую игру"
+    },
+    {
+        "source": "physicalism",
+        "target": "dualism_mind",
+        "weight": -1.0,
+        "note": "Полное противоречие: физикализм отрицает нематериальное сознание"
+    },
+    {
+        "source": "physicalism",
+        "target": "hard_determinism",
+        "weight": 0.7,
+        "note": "Физикализм ведёт к детерминизму физических процессов"
+    },
+    {
+        "source": "physicalism",
+        "target": "functionalism",
+        "weight": 0.6,
+        "note": "Код на кремнии может заменить нейроны"
+    },
+    {
+        "source": "dualism_mind",
+        "target": "functionalism",
+        "weight": -0.8,
+        "note": "Душа не копируется симуляцией алгоритмов"
+    },
+    {
+        "source": "dualism_mind",
+        "target": "libertarianism_will",
+        "weight": 0.8,
+        "note": "Нематериальное Я свободно от физических оков"
+    },
+    {
+        "source": "hard_determinism",
+        "target": "libertarianism_will",
+        "weight": -1.0,
+        "note": "Главное противоречие свободы воли"
+    },
+    {
+        "source": "hard_determinism",
+        "target": "compatibilism",
+        "weight": -0.5,
+        "note": "Детерминисты считают компатибилизм переопределением свободы"
+    },
+    {
+        "source": "libertarianism_will",
+        "target": "compatibilism",
+        "weight": -0.5,
+        "note": "Либертарианцы не согласны на свободу в условиях детерминизма"
+    },
+    {
+        "source": "hard_determinism",
+        "target": "deontology",
+        "weight": -0.7,
+        "note": "Нельзя винить за неисполнение долга, если нет выбора"
+    },
+    {
+        "source": "utilitarianism",
+        "target": "deontology",
+        "weight": -0.9,
+        "note": "Спор о слепом следовании правилам против оценки последствий"
+    },
+    {
+        "source": "utilitarianism",
+        "target": "collectivism",
+        "weight": 0.6,
+        "note": "Благо большинства важнее блага единиц"
+    },
+    {
+        "source": "deontology",
+        "target": "value_objectivism",
+        "weight": 0.8,
+        "note": "Деонтология часто опирается на объективные моральные законы"
+    },
+    {
+        "source": "value_objectivism",
+        "target": "nihilism",
+        "weight": -1.0,
+        "note": "Прямое противостояние: объективные ценности против их отрицания"
+    },
+    {
+        "source": "value_objectivism",
+        "target": "constructivism_values",
+        "weight": -0.8,
+        "note": "Объективизм отрицает рукотворность ценностей"
+    },
+    {
+        "source": "nihilism",
+        "target": "constructivism_values",
+        "weight": -0.8,
+        "note": "Нигилизм считает любые конструкции пустыми, конструктивизм — осмысленными"
+    },
+    {
+        "source": "nihilism",
+        "target": "relativism_truth",
+        "weight": 0.8,
+        "note": "Отрицание объективных ценностей сочетается с релятивизмом истины"
+    },
+    {
+        "source": "constructivism_values",
+        "target": "utilitarianism",
+        "weight": 0.9,
+        "note": "Утилитаризм — типичная конструктивистская этика"
+    },
+    {
+        "source": "constructivism_values",
+        "target": "deontology",
+        "weight": 0.6,
+        "note": "Общественный договор может порождать чувство долга"
+    },
+    {
+        "source": "constructivism_values",
+        "target": "relativism_truth",
+        "weight": 0.7,
+        "note": "Обе позиции подчёркивают человеческую обусловленность"
+    },
+    {
+        "source": "individualism",
+        "target": "collectivism",
+        "weight": -1.0,
+        "note": "Главное противоречие в социальной философии: личность против общества"
+    },
+    {
+        "source": "individualism",
+        "target": "libertarianism_will",
+        "weight": 0.5,
+        "note": "Индивидуализм связан с идеей личной свободы выбора"
+    },
+    {
+        "source": "epistocracy",
+        "target": "democratism",
+        "weight": -1.0,
+        "note": "Противостояние власти экспертов и власти народа"
+    },
+    {
+        "source": "virtue_ethics",
+        "target": "deontology",
+        "weight": -0.7,
+        "note": "Фокус на характере против фокуса на правилах"
+    },
+    {
+        "source": "virtue_ethics",
+        "target": "utilitarianism",
+        "weight": -0.8,
+        "note": "Добродетель важнее расчёта последствий"
+    },
+    {
+        "source": "virtue_ethics",
+        "target": "constructivism_values",
+        "weight": 0.8,
+        "note": "Добродетели — это социально сконструированные идеалы"
+    },
+    {
+        "source": "virtue_ethics",
+        "target": "individualism",
+        "weight": 0.5,
+        "note": "Этика добродетели подчёркивает личностный рост"
+    },
+    {
+        "source": "virtue_ethics",
+        "target": "worldview_faith",
+        "weight": 0.6,
+        "note": "Добродетели как путь в не-теистических традициях"
+    },
+    {
+        "source": "aesthetic_objectivism",
+        "target": "aesthetic_hedonism",
+        "weight": -1.0,
+        "note": "Объективная форма vs субъективное удовольствие"
+    },
+    {
+        "source": "aesthetic_objectivism",
+        "target": "aesthetic_emotivism",
+        "weight": -0.8,
+        "note": "Форма vs проекция эмоций"
+    },
+    {
+        "source": "aesthetic_objectivism",
+        "target": "aesthetic_constructivism",
+        "weight": -0.4,
+        "note": "Объективность vs институциональная условность"
+    },
+    {
+        "source": "aesthetic_objectivism",
+        "target": "semiotic_aesthetics",
+        "weight": -0.5,
+        "note": "Форма vs интерпретация знаков"
+    },
+    {
+        "source": "aesthetic_objectivism",
+        "target": "value_objectivism",
+        "weight": 0.9,
+        "note": "Красота как объективная ценность"
+    },
+    {
+        "source": "aesthetic_objectivism",
+        "target": "platonism",
+        "weight": 0.8,
+        "note": "Прекрасное как эйдос"
+    },
+    {
+        "source": "aesthetic_objectivism",
+        "target": "classical_logic",
+        "weight": 0.4,
+        "note": "Абсолютные законы формы"
+    },
+    {
+        "source": "aesthetic_hedonism",
+        "target": "aesthetic_emotivism",
+        "weight": 0.6,
+        "note": "Обе позиции ставят субъекта в центр, но гедонизм телеснее"
+    },
+    {
+        "source": "aesthetic_hedonism",
+        "target": "aesthetic_constructivism",
+        "weight": -0.6,
+        "note": "Личное удовольствие vs диктат институций"
+    },
+    {
+        "source": "aesthetic_hedonism",
+        "target": "semiotic_aesthetics",
+        "weight": -0.6,
+        "note": "Поверхностное удовольствие vs глубина интерпретации"
+    },
+    {
+        "source": "aesthetic_hedonism",
+        "target": "empirism",
+        "weight": 0.9,
+        "note": "Красота познаётся через чувственный опыт"
+    },
+    {
+        "source": "aesthetic_hedonism",
+        "target": "nihilism",
+        "weight": 0.5,
+        "note": "Если всё сводится к удовольствию, объективные ценности размываются"
+    },
+    {
+        "source": "aesthetic_hedonism",
+        "target": "relativism_truth",
+        "weight": 0.6,
+        "note": "У каждого свой вкус — нет единой истины"
+    },
+    {
+        "source": "aesthetic_emotivism",
+        "target": "aesthetic_constructivism",
+        "weight": -0.3,
+        "note": "Эмоции vs социальные конструкции"
+    },
+    {
+        "source": "aesthetic_emotivism",
+        "target": "semiotic_aesthetics",
+        "weight": 0.2,
+        "note": "Эмоция может быть результатом прочтения знаков, но фокус разный"
+    },
+    {
+        "source": "aesthetic_emotivism",
+        "target": "idealism",
+        "weight": 0.6,
+        "note": "Акцент на внутреннем мире сознания"
+    },
+    {
+        "source": "aesthetic_emotivism",
+        "target": "dualism_mind",
+        "weight": 0.3,
+        "note": "Чувства как нематериальная сфера"
+    },
+    {
+        "source": "aesthetic_emotivism",
+        "target": "nihilism",
+        "weight": -0.3,
+        "note": "Эмотивизм не обязательно отрицает ценности, он их субъективирует"
+    },
+    {
+        "source": "semiotic_aesthetics",
+        "target": "aesthetic_constructivism",
+        "weight": 0.7,
+        "note": "Институции создают и транслируют коды"
+    },
+    {
+        "source": "semiotic_aesthetics",
+        "target": "logic_constructivism",
+        "weight": 0.9,
+        "note": "Язык, знаки, правила игры — всё socially constructed"
+    },
+    {
+        "source": "semiotic_aesthetics",
+        "target": "nominalism",
+        "weight": 0.6,
+        "note": "Абстрактные понятия как имена в системе знаков"
+    },
+    {
+        "source": "semiotic_aesthetics",
+        "target": "constructivism_values",
+        "weight": 0.8,
+        "note": "Ценности создаются и интерпретируются сообществами"
+    },
+    {
+        "source": "semiotic_aesthetics",
+        "target": "relativism_truth",
+        "weight": 0.4,
+        "note": "Множественность интерпретаций"
+    },
+    {
+        "source": "aesthetic_constructivism",
+        "target": "logic_constructivism",
+        "weight": 0.8,
+        "note": "Правила искусства — как языковая игра"
+    },
+    {
+        "source": "aesthetic_constructivism",
+        "target": "constructivism_values",
+        "weight": 0.8,
+        "note": "Искусство — социально сконструированная ценность"
+    },
+    {
+        "source": "aesthetic_constructivism",
+        "target": "nominalism",
+        "weight": 0.4,
+        "note": "Ярлык «искусство» конвенционален"
+    },
+    {
+        "source": "aesthetic_constructivism",
+        "target": "nihilism",
+        "weight": -0.4,
+        "note": "Конструктивизм придаёт ценность договорённостям, нигилизм отрицает"
+    },
+    {
+        "source": "linguistic_universalism",
+        "target": "linguistic_relativism",
+        "weight": -1.0,
+        "note": "Прямое противостояние: универсальная грамматика против языковой относительности"
+    },
+    {
+        "source": "linguistic_universalism",
+        "target": "linguistic_structuralism",
+        "weight": -0.8,
+        "note": "Универсализм против идеи языка как замкнутой системы"
+    },
+    {
+        "source": "linguistic_relativism",
+        "target": "linguistic_structuralism",
+        "weight": -0.5,
+        "note": "Релятивизм подчёркивает влияние языка на мышление, структурализм — автономию языка"
+    },
+    {
+        "source": "linguistic_universalism",
+        "target": "rationalism",
+        "weight": 0.8,
+        "note": "Идея врождённых языковых структур близка рационализму"
+    },
+    {
+        "source": "linguistic_universalism",
+        "target": "classical_logic",
+        "weight": 0.7,
+        "note": "Универсальная логика лежит в основе языка"
+    },
+    {
+        "source": "linguistic_universalism",
+        "target": "platonism",
+        "weight": 0.6,
+        "note": "Объективное существование языковых форм"
+    },
+    {
+        "source": "linguistic_relativism",
+        "target": "relativism_truth",
+        "weight": 0.8,
+        "note": "Относительность языка ведёт к относительности истины"
+    },
+    {
+        "source": "linguistic_relativism",
+        "target": "nominalism",
+        "weight": 0.7,
+        "note": "Язык создаёт категории, а не отражает реальные сущности"
+    },
+    {
+        "source": "linguistic_relativism",
+        "target": "logic_constructivism",
+        "weight": 0.6,
+        "note": "Логика как языковая игра"
+    },
+    {
+        "source": "linguistic_relativism",
+        "target": "empirism",
+        "weight": 0.6,
+        "note": "Языковое разнообразие — эмпирический факт"
+    },
+    {
+        "source": "linguistic_structuralism",
+        "target": "logic_constructivism",
+        "weight": 0.9,
+        "note": "Обе позиции видят логику как систему правил"
+    },
+    {
+        "source": "linguistic_structuralism",
+        "target": "nominalism",
+        "weight": 0.8,
+        "note": "Значения как имена в структуре"
+    },
+    {
+        "source": "linguistic_structuralism",
+        "target": "semiotic_aesthetics",
+        "weight": 0.8,
+        "note": "Семиотика искусства прямо связана с лингвистическим структурализмом"
+    },
+    {
+        "source": "linguistic_structuralism",
+        "target": "constructivism_values",
+        "weight": 0.8,
+        "note": "Ценности как часть языковой системы"
+    },
+    {
+        "source": "personalist_truth",
+        "target": "correspondence_truth",
+        "weight": -0.8,
+        "note": "Персоналистская истина — не безличный факт"
+    },
+    {
+        "source": "personalist_truth",
+        "target": "coherence_truth",
+        "weight": -0.7,
+        "note": "Персоналистская истина не сводится к логической согласованности"
+    },
+    {
+        "source": "personalist_truth",
+        "target": "fideism",
+        "weight": 0.9,
+        "note": "Персоналистская истина познаётся верой"
+    },
+    {
+        "source": "personalist_truth",
+        "target": "personalist_faith",
+        "weight": 0.9,
+        "note": "Персоналистская истина неразрывна с личным отношением"
+    },
+    {
+        "source": "personalist_truth",
+        "target": "idealism",
+        "weight": 0.5,
+        "note": "Духовная реальность выше материальной"
+    },
+    {
+        "source": "fideism",
+        "target": "theological_rationalism",
+        "weight": -0.9,
+        "note": "Фидеизм отрицает рациональное обоснование веры"
+    },
+    {
+        "source": "fideism",
+        "target": "skepticism",
+        "weight": 0.7,
+        "note": "Фидеизм, как и скептицизм, подчёркивает ограниченность разума"
+    },
+    {
+        "source": "fideism",
+        "target": "rationalism",
+        "weight": -0.8,
+        "note": "Вера выше разума"
+    },
+    {
+        "source": "fideism",
+        "target": "personalist_truth",
+        "weight": 0.7,
+        "note": "Истина даётся в откровении, а не в рациональном доказательстве"
+    },
+    {
+        "source": "fideism",
+        "target": "personalist_faith",
+        "weight": 0.6,
+        "note": "Вера как доверие, а не рациональное согласие"
+    },
+    {
+        "source": "theological_rationalism",
+        "target": "rationalism",
+        "weight": 0.8,
+        "note": "Теологический рационализм использует разум для обоснования веры"
+    },
+    {
+        "source": "theological_rationalism",
+        "target": "classical_logic",
+        "weight": 0.5,
+        "note": "Логика может доказывать бытие Бога"
+    },
+    {
+        "source": "theological_rationalism",
+        "target": "scientism",
+        "weight": -0.6,
+        "note": "Рационализм в религии не принимает науку как единственный путь"
+    },
+    {
+        "source": "theological_rationalism",
+        "target": "value_objectivism",
+        "weight": 0.6,
+        "note": "Объективные ценности обосновываются разумом"
+    },
+    {
+        "source": "theological_rationalism",
+        "target": "fideism",
+        "weight": -0.9,
+        "note": "Теологический рационализм противостоит чистому фидеизму"
+    },
+    {
+        "source": "theological_rationalism",
+        "target": "platonism",
+        "weight": 0.7,
+        "note": "Рациональное познание божественных идей"
+    },
+    {
+        "source": "religious_experientialism",
+        "target": "empirism",
+        "weight": 0.7,
+        "note": "Опыт как источник знания — общая черта"
+    },
+    {
+        "source": "religious_experientialism",
+        "target": "idealism",
+        "weight": 0.5,
+        "note": "Духовный опыт подтверждает первичность духа"
+    },
+    {
+        "source": "religious_experientialism",
+        "target": "scientism",
+        "weight": -0.5,
+        "note": "Наука отвергает субъективный опыт как ненадёжный"
+    },
+    {
+        "source": "religious_experientialism",
+        "target": "fideism",
+        "weight": 0.4,
+        "note": "Опыт может быть основой веры, хотя фидеизм не всегда требует опыта"
+    },
+    {
+        "source": "personalist_faith",
+        "target": "worldview_faith",
+        "weight": -0.8,
+        "note": "Личное отношение против системы взглядов"
+    },
+    {
+        "source": "personalist_faith",
+        "target": "personalist_truth",
+        "weight": 0.9,
+        "note": "Вера как отношение к личности-истине"
+    },
+    {
+        "source": "personalist_faith",
+        "target": "fideism",
+        "weight": 0.6,
+        "note": "Вера требует доверия без рациональных доказательств"
+    },
+    {
+        "source": "personalist_faith",
+        "target": "individualism",
+        "weight": 0.4,
+        "note": "Личная вера подчёркивает индивидуальные отношения с Богом"
+    },
+    {
+        "source": "worldview_faith",
+        "target": "constructivism_values",
+        "weight": 0.7,
+        "note": "Мировоззренческая вера как социально сконструированная система"
+    },
+    {
+        "source": "worldview_faith",
+        "target": "logic_constructivism",
+        "weight": 0.5,
+        "note": "Религия как языковая игра"
+    },
+    {
+        "source": "worldview_faith",
+        "target": "collectivism",
+        "weight": 0.5,
+        "note": "Мировоззрение часто разделяется общиной"
+    },
+    {
+        "source": "worldview_faith",
+        "target": "virtue_ethics",
+        "weight": 0.6,
+        "note": "Буддизм/даосизм и добродетели"
+    }
   ]
 }
