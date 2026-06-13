@@ -153,30 +153,55 @@ function drawGraph() {
         pct = Math.max(0, Math.min(100, pct));
         pct = Math.round(pct);
 
-        // Динамический размер узла (базовый 20, максимальный 50)
-        const nodeSize = 20 + (pct * 0.3);
+        // --- Пороговые значения для размера ---
+        let nodeSize;
+        if (pct < 10)       nodeSize = 20;
+        else if (pct < 25)  nodeSize = 25;
+        else if (pct < 50)  nodeSize = 32;
+        else if (pct < 75)  nodeSize = 42;
+        else                nodeSize = 52;
 
-        // Стилизация узла в зависимости от согласия респондента (>50%)
-        const isBeliever = pct >= 50;
-        const nodeColor = isBeliever ? '#4caf50' : '#eceff1'; // Насыщенный зеленый или мягкий светло-серый
-        const borderColor = isBeliever ? '#2e7d32' : '#b0bec5';
-        
-        // ИСПРАВЛЕНИЕ: Если узел светлый, текст делаем темно-синим/серым, если зеленый — белым
-        const fontColor = isBeliever ? '#376345' : '#bf99d2'; 
+        // --- Пороговые значения для цветов (фон, обводка, шрифт) ---
+        let bgColor, borderColor, fontColor;
+        if (pct < 10) {
+            bgColor     = '#f5f5f5';   // почти белый
+            borderColor = '#bdbdbd';
+            fontColor   = '#757575';
+        } else if (pct < 25) {
+            bgColor     = '#ffcdd2';   // светло-красный
+            borderColor = '#ef9a9a';
+            fontColor   = '#be3d3d';
+        } else if (pct < 50) {
+            bgColor     = '#fff9c4';   // светло-жёлтый
+            borderColor = '#fff176';
+            fontColor   = '#dd883d';
+        } else if (pct < 75) {
+            bgColor     = '#c8e6c9';   // светло-зелёный
+            borderColor = '#81c784';
+            fontColor   = '#238255';
+        } else {
+            bgColor     = '#2e7d32';   // насыщенный зелёный
+            borderColor = '#1b5e20';
+            fontColor   = '#113e19';
+        }
 
         return {
             id: node.id,
             label: `${node.label}\n(${pct}%)`,
-            title: node.desc, // Всплывающая подсказка при наведении
+            title: node.desc,
             size: nodeSize,
             shape: 'dot',
             color: {
-                background: nodeColor,
+                background: bgColor,
                 border: borderColor,
                 highlight: { background: '#2196f3', border: '#0b7dda' }
             },
-            // Увеличили размер шрифта для лучшей читаемости
-            font: { color: fontColor, size: 14, strokeWidth: 0.5, strokeColor: isBeliever ? 'transparent' : '#aabbff' }
+            font: {
+                color: fontColor,
+                size: 14,
+                strokeWidth: 0.5,
+                strokeColor: (pct >= 75) ? 'transparent' : '#eeeeee'
+            }
         };
     });
 

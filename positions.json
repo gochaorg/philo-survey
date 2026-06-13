@@ -41,9 +41,38 @@
     { "id": "virtue_ethics", "section": "ethics", "label": "Этика добродетели", "desc": "Мораль в развитии личных качеств и характера, а не в следовании правилам или расчете пользы." },
     { "id": "coherence_truth", "section": "truth", "label": "Когерентная истина", "desc": "Истина — это логическая согласованность высказывания с общей системой знаний." },
     { "id": "psychologism_logic", "section": "logic", "label": "Психологизм", "desc": "Законы логики — продукт когнитивных процессов мозга, а не абсолютные правила вселенной." },
-    { "id": "aesthetic_objectivism", "section": "aesthetics", "label": "Объективизм в эстетике", "desc": "Красота — объективное свойство реальности (гармония, симметрия)." },
-    { "id": "aesthetic_subjectivism", "section": "aesthetics", "label": "Субъективизм в эстетике", "desc": "Красота — исключительно дело личного вкуса и чувственного опыта." },
-    { "id": "aesthetic_constructivism", "section": "aesthetics", "label": "Институциональная эстетика", "desc": "Прекрасное определяется культурным контекстом и договоренностями мира искусства." }
+
+
+    {
+      "id": "aesthetic_objectivism",
+      "section": "aesthetics",
+      "label": "Формальный объективизм",
+      "desc": "Красота — объективное свойство формы: симметрия, пропорции, золотое сечение существуют независимо от зрителя."
+    },
+    {
+      "id": "aesthetic_hedonism",
+      "section": "aesthetics",
+      "label": "Гедонистический субъективизм",
+      "desc": "Эстетическая ценность равна силе чувственного удовольствия. «Красиво» значит «мне приятно»."
+    },
+    {
+      "id": "aesthetic_emotivism",
+      "section": "aesthetics",
+      "label": "Эмотивизм / Вчувствование",
+      "desc": "Красота — это проекция моих эмоций на объект; эстетический опыт — резонанс чувств."
+    },
+    {
+      "id": "aesthetic_constructivism",
+      "section": "aesthetics",
+      "label": "Институциональный конструктивизм",
+      "desc": "Что считать искусством и прекрасным, определяет «мир искусства» — галереи, критика, исторический контекст."
+    },
+    {
+      "id": "semiotic_aesthetics",
+      "section": "aesthetics",
+      "label": "Семиотическая эстетика",
+      "desc": "Произведение — знаковая система. Красота — в глубине интерпретации, в диалоге культурных кодов и смыслов."
+    }
   ],
   "links": [
     { "source": "materialism", "target": "idealism", "weight": -1.0, "note": "Главное онтологическое противоречие" },
@@ -129,13 +158,36 @@
     { "source": "virtue_ethics", "target": "constructivism_values", "weight": 0.8 },
     { "source": "virtue_ethics", "target": "individualism", "weight": 0.5 },
 
-    { "source": "aesthetic_objectivism", "target": "aesthetic_subjectivism", "weight": -1.0 },
-    { "source": "aesthetic_objectivism", "target": "value_objectivism", "weight": 0.9 },
-    { "source": "aesthetic_objectivism", "target": "platonism", "weight": 0.8 },
-    { "source": "aesthetic_subjectivism", "target": "nihilism", "weight": 0.5 },
-    { "source": "aesthetic_subjectivism", "target": "empirism", "weight": 0.6 },
-    { "source": "aesthetic_constructivism", "target": "logic_constructivism", "weight": 0.8 },
-    { "source": "aesthetic_constructivism", "target": "constructivism_values", "weight": 0.8 },
-    { "source": "aesthetic_constructivism", "target": "nominalism", "weight": 0.4 }
+    { "source": "aesthetic_objectivism", "target": "aesthetic_hedonism", "weight": -1.0, "note": "Объективная форма vs субъективное удовольствие" },
+    { "source": "aesthetic_objectivism", "target": "aesthetic_emotivism", "weight": -0.8, "note": "Форма vs проекция эмоций" },
+    { "source": "aesthetic_objectivism", "target": "aesthetic_constructivism", "weight": -0.4, "note": "Объективность vs институциональная условность" },
+    { "source": "aesthetic_objectivism", "target": "semiotic_aesthetics", "weight": -0.5, "note": "Форма vs интерпретация знаков" },
+    { "source": "aesthetic_objectivism", "target": "value_objectivism", "weight": 0.9, "note": "Красота как объективная ценность" },
+    { "source": "aesthetic_objectivism", "target": "platonism", "weight": 0.8, "note": "Прекрасное как эйдос" },
+    { "source": "aesthetic_objectivism", "target": "classical_logic", "weight": 0.4, "note": "Абсолютные законы формы" },
+
+    { "source": "aesthetic_hedonism", "target": "aesthetic_emotivism", "weight": 0.6, "note": "Обе позиции ставят субъекта в центр, но гедонизм телеснее" },
+    { "source": "aesthetic_hedonism", "target": "aesthetic_constructivism", "weight": -0.6, "note": "Личное удовольствие vs диктат институций" },
+    { "source": "aesthetic_hedonism", "target": "semiotic_aesthetics", "weight": -0.6, "note": "Поверхностное удовольствие vs глубина интерпретации" },
+    { "source": "aesthetic_hedonism", "target": "empirism", "weight": 0.9, "note": "Красота познаётся через чувственный опыт" },
+    { "source": "aesthetic_hedonism", "target": "nihilism", "weight": 0.5, "note": "Если всё сводится к удовольствию, объективные ценности размываются" },
+    { "source": "aesthetic_hedonism", "target": "relativism_truth", "weight": 0.6, "note": "У каждого свой вкус — нет единой истины" },
+
+    { "source": "aesthetic_emotivism", "target": "aesthetic_constructivism", "weight": -0.3, "note": "Эмоции vs социальные конструкции" },
+    { "source": "aesthetic_emotivism", "target": "semiotic_aesthetics", "weight": 0.2, "note": "Эмоция может быть результатом прочтения знаков, но фокус разный" },
+    { "source": "aesthetic_emotivism", "target": "idealism", "weight": 0.6, "note": "Акцент на внутреннем мире сознания" },
+    { "source": "aesthetic_emotivism", "target": "dualism_mind", "weight": 0.3, "note": "Чувства как нематериальная сфера" },
+    { "source": "aesthetic_emotivism", "target": "nihilism", "weight": -0.3, "note": "Эмотивизм не обязательно отрицает ценности, он их субъективирует" },
+
+    { "source": "semiotic_aesthetics", "target": "aesthetic_constructivism", "weight": 0.7, "note": "Институции создают и транслируют коды" },
+    { "source": "semiotic_aesthetics", "target": "logic_constructivism", "weight": 0.9, "note": "Язык, знаки, правила игры — всё socially constructed" },
+    { "source": "semiotic_aesthetics", "target": "nominalism", "weight": 0.6, "note": "Абстрактные понятия как имена в системе знаков" },
+    { "source": "semiotic_aesthetics", "target": "constructivism_values", "weight": 0.8, "note": "Ценности создаются и интерпретируются сообществами" },
+    { "source": "semiotic_aesthetics", "target": "relativism_truth", "weight": 0.4, "note": "Множественность интерпретаций" },
+
+    { "source": "aesthetic_constructivism", "target": "logic_constructivism", "weight": 0.8, "note": "Правила искусства — как языковая игра" },
+    { "source": "aesthetic_constructivism", "target": "constructivism_values", "weight": 0.8, "note": "Искусство — социально сконструированная ценность" },
+    { "source": "aesthetic_constructivism", "target": "nominalism", "weight": 0.4, "note": "Ярлык «искусство» конвенционален" },
+    { "source": "aesthetic_constructivism", "target": "nihilism", "weight": -0.4, "note": "Конструктивизм придаёт ценность договорённостям, нигилизм отрицает" }
   ]
 }

@@ -133,9 +133,22 @@
     "text": "Если инопланетяне с совершенно иной биохимией демонстрируют разумное поведение и эмпатию, обладают ли они сознанием?",
     "type": "single",
     "options": [
-      { "text": "Да, если их мозг выполняет те же вычислительные функции, сознание идентично.", "effects": { "functionalism": 1.0, "physicalism": 0.6, "dualism_mind": -0.7 } },
-      { "text": "Нет, подлинное сознание требует уникальной искры души, возможно, только у людей.", "effects": { "dualism_mind": 1.0, "functionalism": -0.8 } },
-      { "text": "Сознание разлито во всей природе, поэтому да, они точно обладают им, как и всё сущее.", "effects": { "panpsychism": 1.0, "dualism_mind": -0.4 } }
+      {
+        "text": "Да, если их мозг (или его аналог) выполняет те же вычислительные функции, что и наш, — сознание идентично.",
+        "effects": { "functionalism": 1.0, "physicalism": 0.3, "dualism_mind": -0.8 }
+      },
+      {
+        "text": "Нет, сознание порождается строго определёнными биологическими процессами (нейроны, химия), и другая биохимия может не давать квалиа.",
+        "effects": { "physicalism": 1.0, "functionalism": -0.5, "panpsychism": -0.5 }
+      },
+      {
+        "text": "Нет, подлинное сознание — нематериальная душа, а поведение не доказывает её присутствия у инопланетян.",
+        "effects": { "dualism_mind": 1.0, "functionalism": -0.5, "physicalism": -0.5 }
+      },
+      {
+        "text": "Да, потому что способность чувствовать вшита во всю материю, так что любая сложная система будет обладать сознанием.",
+        "effects": { "panpsychism": 1.0, "physicalism": -0.3, "dualism_mind": -0.5 }
+      }
     ]
   },
   {
@@ -244,15 +257,28 @@
       { "text": "Общество должно обсуждать, но окончательное решение за избранными представителями, опирающимися на науку.", "effects": { "epistocracy": 0.5, "democratism": 0.5, "compatibilism": 0.3 } }
     ]
   },
-  {
+ {
     "id": "q_aesthetics_1",
     "section": "aesthetics",
-    "text": "Что делает закат или симфонию прекрасными?",
+    "text": "Почему вам может нравиться закат или симфония? Выберите наиболее точную причину.",
     "type": "single",
     "options": [
-      { "text": "Объективно присущие им гармония, пропорции и симметрия.", "effects": { "aesthetic_objectivism": 1.0, "aesthetic_subjectivism": -0.8, "platonism": 0.5 } },
-      { "text": "Исключительно мои личные чувства и вкус в данный момент.", "effects": { "aesthetic_subjectivism": 1.0, "aesthetic_objectivism": -0.8 } },
-      { "text": "Наш культурный контекст, воспитание и то, что мир искусства договорился считать шедевром.", "effects": { "aesthetic_constructivism": 1.0, "aesthetic_objectivism": -0.5, "aesthetic_subjectivism": -0.3 } }
+      {
+        "text": "Потому что они доставляют мне чистое чувственное удовольствие, это приятно моим органам чувств.",
+        "effects": { "aesthetic_hedonism": 1.0, "aesthetic_objectivism": -0.3, "semiotic_aesthetics": -0.5 }
+      },
+      {
+        "text": "Потому что я проецирую на них свои эмоции, они резонируют с моим внутренним состоянием.",
+        "effects": { "aesthetic_emotivism": 1.0, "aesthetic_hedonism": -0.3, "aesthetic_objectivism": -0.4 }
+      },
+      {
+        "text": "Потому что в них есть объективная гармония, пропорции, математическая правильность формы.",
+        "effects": { "aesthetic_objectivism": 1.0, "aesthetic_hedonism": -0.4, "semiotic_aesthetics": -0.3 }
+      },
+      {
+        "text": "Потому что я «читаю» их как текст: цвета и звуки складываются в культурные знаки, вызывая многослойные ассоциации.",
+        "effects": { "semiotic_aesthetics": 1.0, "aesthetic_constructivism": 0.5, "aesthetic_hedonism": -0.5 }
+      }
     ]
   },
   {
@@ -261,9 +287,46 @@
     "text": "Можно ли объективно утверждать, что «Мона Лиза» прекраснее рисунка пятилетнего ребёнка?",
     "type": "single",
     "options": [
-      { "text": "Да, существуют объективные критерии мастерства и красоты.", "effects": { "aesthetic_objectivism": 1.0, "aesthetic_subjectivism": -0.8 } },
-      { "text": "Нет, любое суждение о красоте субъективно и зависит от восприятия.", "effects": { "aesthetic_subjectivism": 1.0, "aesthetic_objectivism": -0.8 } },
-      { "text": "В нашей культуре «Мона Лиза» признана шедевром, но в другой системе ценностей всё могло бы быть иначе.", "effects": { "aesthetic_constructivism": 1.0, "aesthetic_objectivism": -0.4 } }
+      {
+        "text": "Да, потому что в «Моне Лизе» соблюдены объективные законы композиции и мастерства, доказанные веками.",
+        "effects": { "aesthetic_objectivism": 1.0, "aesthetic_constructivism": 0.3, "semiotic_aesthetics": -0.4 }
+      },
+      {
+        "text": "Нет, потому что для кого-то детский рисунок может быть приятнее и вызывать больше положительных эмоций.",
+        "effects": { "aesthetic_hedonism": 1.0, "aesthetic_emotivism": 0.6, "aesthetic_objectivism": -0.6 }
+      },
+      {
+        "text": "Нет, потому что красота не в объекте, а в тех смыслах, которые мы вчитываем: «Мона Лиза» значима только внутри нашей культурной системы знаков.",
+        "effects": { "semiotic_aesthetics": 1.0, "aesthetic_constructivism": 0.7, "aesthetic_objectivism": -0.5 }
+      },
+      {
+        "text": "Да, но только потому, что так решили эксперты и история искусства — это вопрос договорённостей внутри институций.",
+        "effects": { "aesthetic_constructivism": 1.0, "aesthetic_objectivism": 0.3, "semiotic_aesthetics": 0.3 }
+      }
+    ]
+  },
+  {
+    "id": "q_aesthetics_3",
+    "section": "aesthetics",
+    "text": "Представьте, что вы смотрите на абстрактную картину, которая не вызывает у вас никаких эмоций и кажется «мазнёй». Может ли она всё-таки быть великим искусством?",
+    "type": "single",
+    "options": [
+      {
+        "text": "Нет, если она не доставляет удовольствия или не трогает чувства, это просто плохое искусство.",
+        "effects": { "aesthetic_hedonism": 0.7, "aesthetic_emotivism": 0.7, "semiotic_aesthetics": -0.6, "aesthetic_constructivism": -0.5 }
+      },
+      {
+        "text": "Да, если она построена по строгим формальным законам цвета и ритма, даже если я их не чувствую.",
+        "effects": { "aesthetic_objectivism": 1.0, "aesthetic_hedonism": -0.5, "aesthetic_emotivism": -0.5 }
+      },
+      {
+        "text": "Да, если она создаёт новый визуальный язык, и понимание придёт позже, через интерпретацию и знание контекста.",
+        "effects": { "semiotic_aesthetics": 1.0, "aesthetic_constructivism": 0.6, "aesthetic_hedonism": -0.4 }
+      },
+      {
+        "text": "Только если арт-институции (музеи, критика) признают её шедевром — тогда она им станет.",
+        "effects": { "aesthetic_constructivism": 1.0, "semiotic_aesthetics": 0.4, "aesthetic_hedonism": -0.5 }
+      }
     ]
   }
 ]
