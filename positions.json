@@ -1,0 +1,102 @@
+{
+  "nodes": [
+    { "id": "materialism", "section": "ontology", "label": "Материализм", "desc": "Мир состоит только из физической материи." },
+    { "id": "idealism", "section": "ontology", "label": "Идеализм", "desc": "Первооснова мира — дух, идеи, сознание или симуляция." },
+    { "id": "nominalism", "section": "ontology", "label": "Номинализм", "desc": "Абстрактные понятия (красота, числа) — лишь имена, созданные человеком." },
+    { "id": "platonism", "section": "ontology", "label": "Платонизм / Реализм", "desc": "Идеи, математика и универсалии существуют объективно." },
+    
+    { "id": "empirism", "section": "epistemology", "label": "Эмпиризм", "desc": "Единственный источник знаний — чувственный опыт и эксперимент." },
+    { "id": "rationalism", "section": "epistemology", "label": "Рационализм", "desc": "Истину можно познать чистым разумом и логикой без опыта." },
+    { "id": "skepticism", "section": "epistemology", "label": "Скептицизм / Агностицизм", "desc": "Мир принципиально непознаваем, истина недостижима." },
+    { "id": "scientism", "section": "epistemology", "label": "Сайентизм", "desc": "Наука — единственный легитимный и высший способ познания." },
+    
+    { "id": "correspondence_truth", "section": "truth", "label": "Корреспондентская истина", "desc": "Истина — это то, что строго соответствует фактам реальности." },
+    { "id": "pragmatic_truth", "section": "truth", "label": "Прагматическая истина", "desc": "Истинно то, что полезно и эффективно работает на практике." },
+    { "id": "relativism_truth", "section": "truth", "label": "Релятивизм истины", "desc": "Объективной истины нет, у каждого своя правда и контекст." },
+    
+    { "id": "classical_logic", "section": "logic", "label": "Классическая логика", "desc": "Законы логики абсолютны, объективны и неизменны." },
+    { "id": "logic_constructivism", "section": "logic", "label": "Конструктивизм / Постмодерн", "desc": "Логика — лишь изобретенный человеком инструмент или языковая игра." },
+    
+    { "id": "physicalism", "section": "mind", "label": "Физикализм / Редукционизм", "desc": "Сознание — это просто электрохимия мозга." },
+    { "id": "dualism_mind", "section": "mind", "label": "Дуализм сознания", "desc": "Сознание имеет нематериальную природу, отличную от тела." },
+    { "id": "functionalism", "section": "mind", "label": "Функционализм (ИИ)", "desc": "ИИ может обладать полноценным сознанием, если копирует его функции." },
+    { "id": "panpsychism", "section": "mind", "label": "Панпсихизм", "desc": "Элементарные частицы обладают базовым свойством чувствовать." },
+    
+    { "id": "hard_determinism", "section": "determinism", "label": "Жесткий детерминизм", "desc": "Все события предопределены законами физики, свободы воли нет." },
+    { "id": "libertarianism_will", "section": "determinism", "label": "Либертарианство воли", "desc": "Человек обладает абсолютной свободой воли, выбор не предопределен." },
+    { "id": "compatibilism", "section": "determinism", "label": "Компатибилизм", "desc": "Свобода воли совместима с детерминизмом (мы свободны, пока действуем без принуждения)." },
+    
+    { "id": "utilitarianism", "section": "ethics", "label": "Утилитаризм", "desc": "Морально то, что приносит максимум пользы большинству." },
+    { "id": "deontology", "section": "ethics", "label": "Деонтология", "desc": "Мораль — это выполнение абсолютного долга и правил (Кант)." },
+    
+    { "id": "value_objectivism", "section": "values", "label": "Объективизм ценностей", "desc": "Добро и зло объективны и существуют независимо от людей." },
+    { "id": "nihilism", "section": "values", "label": "Нигилизм / Субъективизм", "desc": "Ценности выдуманы людьми, объективного смысла и морали нет." },
+    
+    { "id": "individualism", "section": "social", "label": "Индивидуализм / Либертарианство", "desc": "Права и свобода отдельной личности превыше интересов общества." },
+    { "id": "collectivism", "section": "social", "label": "Коллективизм / Коммунитаризм", "desc": "Интересы и благо общества важнее эгоистичных прав индивида." },
+    { "id": "epistocracy", "section": "social", "label": "Эпистократия / Технократия", "desc": "Управлять государством должны только компетентные эксперты и ученые." },
+    { "id": "democratism", "section": "social", "label": "Демократизм", "desc": "Все граждане имеют равное право влиять на власть, независимо от знаний." }
+  ],
+  "links": [
+    { "source": "materialism", "target": "idealism", "weight": -1.0, "note": "Главное онтологическое противоречие" },
+    { "source": "materialism", "target": "physicalism", "weight": 1.0, "note": "Физика ума прямо следует из материализма" },
+    { "source": "materialism", "target": "empirism", "weight": 0.7 },
+    { "source": "materialism", "target": "hard_determinism", "weight": 0.8, "note": "Материальный мир подчинен законам физики" },
+    { "source": "materialism", "target": "panpsychism", "weight": -0.6 },
+
+    { "source": "idealism", "target": "dualism_mind", "weight": 0.8 },
+    { "source": "idealism", "target": "rationalism", "weight": 0.6 },
+    { "source": "idealism", "target": "value_objectivism", "weight": 0.6, "note": "Часто связано через религиозный или абсолютный базис" },
+    { "source": "idealism", "target": "physicalism", "weight": -1.0 },
+
+    { "source": "nominalism", "target": "platonism", "weight": -1.0, "note": "Спор об абстрактных объектах" },
+    { "source": "nominalism", "target": "empirism", "weight": 0.6 },
+    { "source": "platonism", "target": "rationalism", "weight": 0.7, "note": "Математические истины постигаются разумом" },
+    { "source": "platonism", "target": "classical_logic", "weight": 0.8 },
+
+    { "source": "empirism", "target": "rationalism", "weight": -0.6, "note": "Классический спор об источнике знаний" },
+    { "source": "empirism", "target": "scientism", "weight": 0.8 },
+    { "source": "empirism", "target": "correspondence_truth", "weight": 0.7 },
+
+    { "source": "rationalism", "target": "classical_logic", "weight": 0.9 },
+    { "source": "rationalism", "target": "deontology", "weight": 0.7, "note": "Этика Канта выведена логически" },
+
+    { "source": "skepticism", "target": "scientism", "weight": -0.8 },
+    { "source": "skepticism", "target": "relativism_truth", "weight": 0.9 },
+    { "source": "skepticism", "target": "nihilism", "weight": 0.8 },
+    { "source": "skepticism", "target": "correspondence_truth", "weight": -0.7 },
+
+    { "source": "scientism", "target": "physicalism", "weight": 0.8 },
+    { "source": "scientism", "target": "epistocracy", "weight": 0.6, "note": "Тяга к власти экспертов-ученых" },
+    { "source": "scientism", "target": "relativism_truth", "weight": -0.9 },
+
+    { "source": "correspondence_truth", "target": "relativism_truth", "weight": -1.0 },
+    { "source": "pragmatic_truth", "target": "utilitarianism", "weight": 0.7, "note": "Истинно то, что полезно; морально то, что полезно" },
+
+    { "source": "classical_logic", "target": "logic_constructivism", "weight": -1.0 },
+
+    { "source": "physicalism", "target": "dualism_mind", "weight": -1.0 },
+    { "source": "physicalism", "target": "hard_determinism", "weight": 0.7 },
+    { "source": "physicalism", "target": "functionalism", "weight": 0.6, "note": "Код на кремнии может заменить нейроны" },
+
+    { "source": "dualism_mind", "target": "functionalism", "weight": -0.8, "note": "Душа не копируется симуляцией алгоритмов" },
+    { "source": "dualism_mind", "target": "libertarianism_will", "weight": 0.8, "note": "Нематериальное Я свободно от физических оков" },
+
+    { "source": "hard_determinism", "target": "libertarianism_will", "weight": -1.0, "note": "Главное противоречие свободы воли" },
+    { "source": "hard_determinism", "target": "compatibilism", "weight": -0.5 },
+    { "source": "libertarianism_will", "target": "compatibilism", "weight": -0.5 },
+    { "source": "hard_determinism", "target": "deontology", "weight": -0.7, "note": "Нельзя винить за неисполнение долга, если нет выбора" },
+
+    { "source": "utilitarianism", "target": "deontology", "weight": -0.9, "note": "Спор о слепом следовании правилам против оценки последствий" },
+    { "source": "utilitarianism", "target": "collectivism", "weight": 0.6, "note": "Благо большинства важнее блага единиц" },
+    { "source": "deontology", "target": "value_objectivism", "weight": 0.8 },
+
+    { "source": "value_objectivism", "target": "nihilism", "weight": -1.0 },
+    { "source": "nihilism", "target": "relativism_truth", "weight": 0.8 },
+
+    { "source": "individualism", "target": "collectivism", "weight": -1.0 },
+    { "source": "individualism", "target": "libertarianism_will", "weight": 0.5 },
+    
+    { "source": "epistocracy", "target": "democratism", "weight": -1.0 }
+  ]
+}
