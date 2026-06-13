@@ -142,7 +142,7 @@ function displayResults() {
 
         let ppos = graphStructure.nodes.find( n => n.id == position );
         if( ppos ){
-          let fg = '#c80101';
+          let fg = '#cd3c3c';
           if( pct < 10 ){
             fg = '#e28b00';
           } else if ( pct < 25 ){
@@ -150,7 +150,7 @@ function displayResults() {
           } else if ( pct < 50 ){
             fg = '#a4d603';
           } else if ( pct < 75 ){
-            fg = '#199001';
+            fg = '#51379f';
           } else {
           }
 
@@ -197,23 +197,23 @@ function drawGraph() {
         // --- Пороговые значения для цветов (фон, обводка, шрифт) ---
         let bgColor, borderColor, fontColor;
         if (pct < 10) {
-            bgColor     = '#f5f5f5';   // почти белый
+            bgColor     = '#f98383';   // почти белый
             borderColor = '#bdbdbd';
             fontColor   = '#757575';
         } else if (pct < 25) {
-            bgColor     = '#ffcdd2';   // светло-красный
+            bgColor     = '#f8c596';   // светло-красный
             borderColor = '#ef9a9a';
             fontColor   = '#be3d3d';
         } else if (pct < 50) {
-            bgColor     = '#fff9c4';   // светло-жёлтый
+            bgColor     = '#e1f954';   // светло-жёлтый
             borderColor = '#fff176';
             fontColor   = '#dd883d';
         } else if (pct < 75) {
-            bgColor     = '#c8e6c9';   // светло-зелёный
+            bgColor     = '#e8f47a';   // светло-зелёный
             borderColor = '#81c784';
             fontColor   = '#238255';
         } else {
-            bgColor     = '#2e7d32';   // насыщенный зелёный
+            bgColor     = '#765eb3';   // насыщенный зелёный
             borderColor = '#1b5e20';
             fontColor   = '#113e19';
         }
