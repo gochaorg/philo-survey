@@ -72,6 +72,62 @@
       "section": "aesthetics",
       "label": "Семиотическая эстетика",
       "desc": "Произведение — знаковая система. Красота — в глубине интерпретации, в диалоге культурных кодов и смыслов."
+    },
+
+    {
+      "id": "linguistic_universalism",
+      "section": "language",
+      "label": "Лингвистический универсализм",
+      "desc": "В основе всех языков лежат врождённые логические структуры; язык лишь одежда для мысли."
+    },
+    {
+      "id": "linguistic_relativism",
+      "section": "language",
+      "label": "Лингвистический релятивизм",
+      "desc": "Язык формирует мышление: разные языки создают несоизмеримые картины мира."
+    },
+    {
+      "id": "linguistic_structuralism",
+      "section": "language",
+      "label": "Структурализм / Постструктурализм",
+      "desc": "Язык — самодостаточная система знаков; значения рождаются из различий, а не из связи с реальностью."
+    },
+
+    {
+      "id": "personalist_truth",
+      "section": "religion",
+      "label": "Персоналистская истина",
+      "desc": "Истина — не безличный факт, а живая Личность, с которой можно вступить в отношение (напр. Христос)."
+    },
+    {
+      "id": "fideism",
+      "section": "religion",
+      "label": "Фидеизм",
+      "desc": "Божественная истина даётся исключительно через веру и откровение; разум здесь бессилен."
+    },
+    {
+      "id": "theological_rationalism",
+      "section": "religion",
+      "label": "Теологический рационализм",
+      "desc": "Вера и разум гармоничны; бытие Бога и основные истины можно частично обосновать рационально."
+    },
+    {
+      "id": "religious_experientialism",
+      "section": "religion",
+      "label": "Религиозный эмпиризм",
+      "desc": "Основа веры — личный духовный опыт, мистическое переживание встречи с Божественным."
+    },
+    {
+      "id": "personalist_faith",
+      "section": "religion",
+      "label": "Вера как отношение",
+      "desc": "Религия — прежде всего личные отношения, диалог и доверие между человеком и Богом-личностью."
+    },
+    {
+      "id": "worldview_faith",
+      "section": "religion",
+      "label": "Вера как мировоззрение",
+      "desc": "Религия — система взглядов, практик и этических принципов; вера может быть не-теистической (буддизм, даосизм)."
     }
   ],
   "links": [
@@ -188,6 +244,52 @@
     { "source": "aesthetic_constructivism", "target": "logic_constructivism", "weight": 0.8, "note": "Правила искусства — как языковая игра" },
     { "source": "aesthetic_constructivism", "target": "constructivism_values", "weight": 0.8, "note": "Искусство — социально сконструированная ценность" },
     { "source": "aesthetic_constructivism", "target": "nominalism", "weight": 0.4, "note": "Ярлык «искусство» конвенционален" },
-    { "source": "aesthetic_constructivism", "target": "nihilism", "weight": -0.4, "note": "Конструктивизм придаёт ценность договорённостям, нигилизм отрицает" }
+    { "source": "aesthetic_constructivism", "target": "nihilism", "weight": -0.4, "note": "Конструктивизм придаёт ценность договорённостям, нигилизм отрицает" },
+
+    { "source": "linguistic_universalism", "target": "linguistic_relativism", "weight": -1.0 },
+    { "source": "linguistic_universalism", "target": "linguistic_structuralism", "weight": -0.8 },
+    { "source": "linguistic_relativism", "target": "linguistic_structuralism", "weight": -0.5 },
+    { "source": "linguistic_universalism", "target": "rationalism", "weight": 0.8 },
+    { "source": "linguistic_universalism", "target": "classical_logic", "weight": 0.7 },
+    { "source": "linguistic_universalism", "target": "platonism", "weight": 0.6 },
+    { "source": "linguistic_relativism", "target": "relativism_truth", "weight": 0.8 },
+    { "source": "linguistic_relativism", "target": "nominalism", "weight": 0.7 },
+    { "source": "linguistic_relativism", "target": "logic_constructivism", "weight": 0.6 },
+    { "source": "linguistic_relativism", "target": "empirism", "weight": 0.6 },
+    { "source": "linguistic_structuralism", "target": "logic_constructivism", "weight": 0.9 },
+    { "source": "linguistic_structuralism", "target": "nominalism", "weight": 0.8 },
+    { "source": "linguistic_structuralism", "target": "semiotic_aesthetics", "weight": 0.8 },
+    { "source": "linguistic_structuralism", "target": "constructivism_values", "weight": 0.8 },
+
+    { "source": "personalist_truth", "target": "correspondence_truth", "weight": -0.8 },
+    { "source": "personalist_truth", "target": "coherence_truth", "weight": -0.7 },
+    { "source": "personalist_truth", "target": "fideism", "weight": 0.9 },
+    { "source": "personalist_truth", "target": "personalist_faith", "weight": 0.9 },
+    { "source": "personalist_truth", "target": "idealism", "weight": 0.5 },
+
+    { "source": "fideism", "target": "theological_rationalism", "weight": -0.9 },
+    { "source": "fideism", "target": "skepticism", "weight": 0.7 },
+    { "source": "fideism", "target": "rationalism", "weight": -0.8 },
+    { "source": "fideism", "target": "personalist_truth", "weight": 0.7 },
+    { "source": "fideism", "target": "personalist_faith", "weight": 0.6 },
+
+    { "source": "theological_rationalism", "target": "rationalism", "weight": 0.8 },
+    { "source": "theological_rationalism", "target": "classical_logic", "weight": 0.5 },
+    { "source": "theological_rationalism", "target": "scientism", "weight": -0.6 },
+    { "source": "theological_rationalism", "target": "value_objectivism", "weight": 0.6 },
+    { "source": "theological_rationalism", "target": "fideism", "weight": -0.9 },
+
+    { "source": "religious_experientialism", "target": "empirism", "weight": 0.7 },
+    { "source": "religious_experientialism", "target": "idealism", "weight": 0.5 },
+    { "source": "religious_experientialism", "target": "scientism", "weight": -0.5 },
+    { "source": "religious_experientialism", "target": "fideism", "weight": 0.4 },
+
+    { "source": "personalist_faith", "target": "worldview_faith", "weight": -0.8 },
+    { "source": "personalist_faith", "target": "personalist_truth", "weight": 0.9 },
+    { "source": "personalist_faith", "target": "fideism", "weight": 0.6 },
+    { "source": "personalist_faith", "target": "individualism", "weight": 0.4 },
+    { "source": "worldview_faith", "target": "constructivism_values", "weight": 0.7 },
+    { "source": "worldview_faith", "target": "logic_constructivism", "weight": 0.5 },
+    { "source": "worldview_faith", "target": "collectivism", "weight": 0.5 }
   ]
 }
