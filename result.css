@@ -1,0 +1,109 @@
+.p-section {margin-bottom: 10mm;}
+
+.p-section-name {
+    font-size: 2em;
+}
+
+.p-section-name::before {
+    content: "Раздел ";
+}
+
+.p-postition {
+    padding-left: 5mm;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 5mm;
+}
+
+.p-postition-name {
+    display: none;
+}
+
+.p-postition-match-pct::after {
+    content: "%";
+    margin-right: 2mm;
+}
+
+.p-opostition {
+    display: flex;
+    flex-basis: 100%;
+    flex-direction: column;
+    padding-left: 5mm;
+}
+
+.p-opostition::before {
+    content: "Опозиции: "
+}
+
+.p-opostition-detail.hidden {
+  display: none;
+}
+
+.p-postition-label {
+    font-size: 1.5em;
+}
+
+.p-postition.m_pct_lt_10 .p-postition-match-pct,
+.p-postition.m_pct_lt_10 .p-postition-name,
+.p-postition.m_pct_lt_10 .p-postition-label {
+    color: #ff0600;
+}
+
+.p-postition.m_pct_lt_25 .p-postition-match-pct,
+.p-postition.m_pct_lt_25 .p-postition-name,
+.p-postition.m_pct_lt_25 .p-postition-label {
+    color: orange;
+}
+
+.p-postition.m_pct_lt_50 .p-postition-match-pct,
+.p-postition.m_pct_lt_50 .p-postition-name,
+.p-postition.m_pct_lt_50 .p-postition-label {
+    color: #abaa00;
+}
+
+.p-postition.m_pct_lt_75 .p-postition-match-pct,
+.p-postition.m_pct_lt_75 .p-postition-name,
+.p-postition.m_pct_lt_75 .p-postition-label {
+    color: #62c400;
+}
+
+.p-postition.m_pct_gt_75 .p-postition-match-pct,
+.p-postition.m_pct_gt_75 .p-postition-name,
+.p-postition.m_pct_gt_75 .p-postition-label {
+    color: #5a00d2;
+}
+
+.p-opostition-pair {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0mm 3mm;
+    margin-bottom: 4mm;
+}
+
+.p-opostition-note {
+    flex-basis: 100%
+}
+
+.p-opostition-label {
+    font-size: 1.25em;
+}
+
+.m_w_neg_05 {
+    color: #b40000;
+}
+
+.m_w_neg_01 {
+    color: #d77200;
+}
+
+.m_w_pos_01 {
+    color: #9a8900;
+}
+
+.m_w_pos_05 {
+    color: #9ab400;
+}
+
+.m_w_pos_1 {
+    color: #03b400;
+}

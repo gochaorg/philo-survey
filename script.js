@@ -130,47 +130,179 @@ function displayResults() {
     const resultsContainer = document.getElementById('position-values');
     resultsContainer.innerHTML = '<h2>Ваш философский профиль:</h2>';
 
-    for (let position in userScores) {
-        let max = maxScores[position] || 1;
-        // Переводим в проценты и ограничиваем диапазон от 0 до 100
-        let pct = (userScores[position] / max) * 100;
-        pct = Math.max(0, Math.min(100, pct));
-        pct = Math.round(pct);
+    // section:[position:[]]
+    let sectionPostion = {};
+    for (let posId in userScores) {
+        let ppos = graphStructure.nodes.find( n => n.id == posId );
+        if (ppos) {
+            let sect = sectionPostion[ppos.section];
+            if( sect==null || sect==undefined ){
+                sect = {}
+                sectionPostion[ppos.section] = sect;
+            }
 
-        // Добавляем строку с результатом на страницу
-        const resultLine = document.createElement('p');
+            let opositions = [];
+            for( let link of graphStructure.links ){
+                if( posId == link.source || posId == link.target ) {
+                    opositions.push( link );
+                }
+            }
 
-        let ppos = graphStructure.nodes.find( n => n.id == position );
-        if( ppos ){
-          let fg = '#cd3c3c';
-          if( pct < 10 ){
-            fg = '#e28b00';
-          } else if ( pct < 25 ){
-            fg = '#dac503';
-          } else if ( pct < 50 ){
-            fg = '#a4d603';
-          } else if ( pct < 75 ){
-            fg = '#379f6f';
-          } else {
-            fg = '#51379f';
-          }
-
-          resultLine.innerHTML = 
-            `<strong style="color: ${fg}">${position}:</strong> ${pct}% совпадения
-              <br/> Секция: ${ppos.section}
-              <br/> Направление: ${ppos.label}
-              Описание: 
-              <br/> ${ppos.desc}              
-            `;
-        }else{
-          resultLine.innerHTML = 
-            `<strong>${position}:</strong> 
-              ${pct}% совпадения
-            `;
+            sect[posId] = {
+                score: userScores[posId],
+                scoreMax: maxScores[posId] || 1,
+                scorePct: Math.round(Math.max( Math.min( ((userScores[posId] / (maxScores[posId] || 1)) * 100), 100 ), 0 )),
+                position: ppos,
+                opositions: opositions
+            };
         }
-
-        resultsContainer.appendChild(resultLine);
     }
+
+    for( let sectName in sectionPostion ){
+        let resultSection = document.createElement('div');
+        resultSection.className = "p-section";
+
+        let r_sec_name = document.createElement('div');
+        r_sec_name.innerText = sectName;
+        r_sec_name.className = "p-section-name";        
+        resultSection.appendChild(r_sec_name);
+
+        resultsContainer.appendChild(resultSection);
+
+        for( let positionName in sectionPostion[sectName] ){
+            let position = sectionPostion[sectName][positionName];
+
+            let positionContainer = document.createElement('div');
+            positionContainer.className = 'p-postition';
+            resultSection.appendChild(positionContainer);
+
+            if( position.scorePct < 10 ){
+                positionContainer.className += ' m_pct_lt_10';
+            }else if( position.scorePct < 25 ){
+                positionContainer.className += ' m_pct_lt_25';
+            }else if( position.scorePct < 50 ){
+                positionContainer.className += ' m_pct_lt_50';
+            }else if( position.scorePct < 75 ){
+                positionContainer.className += ' m_pct_lt_75';
+            }else{
+                positionContainer.className += ' m_pct_gt_75';
+            }
+
+            let positionNameDiv = document.createElement('div');
+            positionNameDiv.className = 'p-postition-name';
+            positionNameDiv.innerText = positionName;
+            positionContainer.appendChild(positionNameDiv);
+
+            let positionMatchPctDiv = document.createElement('div');
+            positionMatchPctDiv.className = 'p-postition-match-pct';
+            positionMatchPctDiv.innerText = position.scorePct;
+            positionContainer.appendChild(positionMatchPctDiv);
+
+            let positionLabelDiv = document.createElement('div');
+            positionLabelDiv.className = 'p-postition-label';
+            positionLabelDiv.innerText = position.position.label;
+            positionContainer.appendChild(positionLabelDiv);
+
+            let opositionDiv = document.createElement('div');
+            opositionDiv.className = 'p-opostition';
+            positionContainer.appendChild(opositionDiv);
+
+            const opositionDetailDiv = document.createElement('div');
+            opositionDetailDiv.className = 'p-opostition-detail hidden';
+
+            const toggleDetailBut = document.createElement('button');
+            toggleDetailBut.innerText = "Показать опозиции";
+            toggleDetailBut.addEventListener('click', (ev) => {
+                if( opositionDetailDiv.classList.toggle('hidden') ){
+                    toggleDetailBut.innerText = "Показать опозиции";
+                }else{
+                    toggleDetailBut.innerText = "Спрятать опозиции";
+                }
+            });
+
+            opositionDiv.appendChild(opositionDetailDiv);
+            opositionDiv.appendChild(toggleDetailBut);
+
+            for( let oposition of position.opositions ){
+                const opContainer = document.createElement('div');
+                opContainer.className = 'p-opostition-pair';
+                opositionDetailDiv.appendChild(opContainer);
+
+                let label = `${oposition.source} vs ${oposition.target}`;
+                let weight = oposition.weight;
+                let note = oposition.note;
+
+                let opositionLabelDiv = document.createElement('div');
+                opositionLabelDiv.className = 'p-opostition-label';
+                opositionLabelDiv.innerText = label;
+                opContainer.appendChild(opositionLabelDiv);
+                
+                let opositionWeightDiv = document.createElement('div');
+                opositionWeightDiv.className = 'p-opostition-weight';
+                opositionWeightDiv.innerText = weight;
+                opContainer.appendChild(opositionWeightDiv);                
+                
+                let opositionNoteDiv = document.createElement('div');
+                opositionNoteDiv.className = 'p-opostition-note';
+                opositionNoteDiv.innerText = note;
+                opContainer.appendChild(opositionNoteDiv);
+
+                if( weight<-0.5 ){
+                    opContainer.className += ' m_w_neg_05';
+                } else if( weight<-0.1 ){
+                    opContainer.className += ' m_w_neg_01';
+                } else if( weight<0.1 ){
+                    opContainer.className += ' m_w_pos_01';
+                } else if( weight<0.5 ){
+                    opContainer.className += ' m_w_pos_05';
+                } else {
+                    opContainer.className += ' m_w_pos_1';
+                }
+            }
+        }
+    }
+
+    // for (let position in userScores) {
+    //     let max = maxScores[position] || 1;
+    //     // Переводим в проценты и ограничиваем диапазон от 0 до 100
+    //     let pct = (userScores[position] / max) * 100;
+    //     pct = Math.max(0, Math.min(100, pct));
+    //     pct = Math.round(pct);
+
+    //     // Добавляем строку с результатом на страницу
+    //     const resultLine = document.createElement('p');
+
+    //     let ppos = graphStructure.nodes.find( n => n.id == position );
+    //     if( ppos ){
+    //       let fg = '#cd3c3c';
+    //       if( pct < 10 ){
+    //         fg = '#e28b00';
+    //       } else if ( pct < 25 ){
+    //         fg = '#dac503';
+    //       } else if ( pct < 50 ){
+    //         fg = '#a4d603';
+    //       } else if ( pct < 75 ){
+    //         fg = '#379f6f';
+    //       } else {
+    //         fg = '#51379f';
+    //       }
+
+    //       resultLine.innerHTML = 
+    //         `<strong style="color: ${fg}">${position}:</strong> ${pct}% совпадения
+    //           <br/> Секция: ${ppos.section}
+    //           <br/> Направление: ${ppos.label}
+    //           Описание: 
+    //           <br/> ${ppos.desc}              
+    //         `;
+    //     }else{
+    //       resultLine.innerHTML = 
+    //         `<strong>${position}:</strong> 
+    //           ${pct}% совпадения
+    //         `;
+    //     }
+
+    //     resultsContainer.appendChild(resultLine);
+    // }
     
     // Прокрутка экрана к результатам
     //resultsContainer.scrollIntoView({ behavior: 'smooth' });
