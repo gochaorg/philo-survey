@@ -252,10 +252,12 @@ function displayResults() {
                 opositionWeightDiv.innerText = weight;
                 opContainer.appendChild(opositionWeightDiv);                
                 
-                let opositionNoteDiv = document.createElement('div');
-                opositionNoteDiv.className = 'p-opostition-note';
-                opositionNoteDiv.innerText = note;
-                opContainer.appendChild(opositionNoteDiv);
+                if( note ){
+                    let opositionNoteDiv = document.createElement('div');
+                    opositionNoteDiv.className = 'p-opostition-note';
+                    opositionNoteDiv.innerText = note;
+                    opContainer.appendChild(opositionNoteDiv);
+                }
 
                 if( weight<-0.5 ){
                     opContainer.className += ' m_w_neg_05';
@@ -267,6 +269,20 @@ function displayResults() {
                     opContainer.className += ' m_w_pos_05';
                 } else {
                     opContainer.className += ' m_w_pos_1';
+                }
+
+                if( oposition.arguments ){
+                    let argsDiv = document.createElement('div');
+                    argsDiv.className = 'p-opostition-args';
+                    //argsDiv.innerText = note;
+                    opContainer.appendChild(argsDiv);
+
+                    for( let arg of oposition.arguments ){
+                        let argDiv = document.createElement('div');
+                        argDiv.className = 'p-opostition-arg';
+                        argDiv.innerText = arg;
+                        argsDiv.appendChild(argDiv);
+                    }
                 }
             }
         }

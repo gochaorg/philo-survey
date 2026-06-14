@@ -119,3 +119,17 @@
 .m_w_pos_1 {
     color: #03b400;
 }
+
+.p-opostition-args::before {
+    content: "Аргументы";
+    display: block;
+    margin-top: 2mm;
+    color: black;
+    font-weight: bold
+}
+
+.p-opostition-args div {
+    padding-left: 5mm;
+    margin-bottom: 2mm;
+    color: black;
+}
