@@ -24,6 +24,11 @@
     margin-right: 2mm;
 }
 
+.p-postition-desc {
+    flex-basis: 100%;
+    font-style: italic;
+}
+
 .p-opostition {
     display: flex;
     flex-basis: 100%;

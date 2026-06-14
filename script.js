@@ -203,6 +203,11 @@ function displayResults() {
             positionLabelDiv.innerText = position.position.label;
             positionContainer.appendChild(positionLabelDiv);
 
+            let positionDescDiv = document.createElement('div');
+            positionDescDiv.className = 'p-postition-desc';
+            positionDescDiv.innerText = position.position.desc;
+            positionContainer.appendChild(positionDescDiv);
+
             let opositionDiv = document.createElement('div');
             opositionDiv.className = 'p-opostition';
             positionContainer.appendChild(opositionDiv);
