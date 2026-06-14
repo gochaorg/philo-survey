@@ -12,7 +12,7 @@
     padding-left: 5mm;
     display: flex;
     flex-wrap: wrap;
-    margin-top: 5mm;
+    margin-top: 8mm;
 }
 
 .p-postition-name {
@@ -29,6 +29,12 @@
     font-style: italic;
 }
 
+.p-postition-description {
+    flex-basis: 100%;
+    font-style: italic;
+    margin-top: 2mm;
+}
+
 .p-opostition {
     display: flex;
     flex-basis: 100%;
@@ -37,7 +43,8 @@
 }
 
 .p-opostition::before {
-    content: "Опозиции: "
+    content: "Опозиции: ";
+    margin-top: 2mm;
 }
 
 .p-opostition-detail.hidden {

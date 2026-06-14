@@ -208,6 +208,11 @@ function displayResults() {
             positionDescDiv.innerText = position.position.desc;
             positionContainer.appendChild(positionDescDiv);
 
+            let positionDescкшзешщтDiv = document.createElement('div');
+            positionDescкшзешщтDiv.className = 'p-postition-description';
+            positionDescкшзешщтDiv.innerText = position.position.description;
+            positionContainer.appendChild(positionDescкшзешщтDiv);
+
             let opositionDiv = document.createElement('div');
             opositionDiv.className = 'p-opostition';
             positionContainer.appendChild(opositionDiv);
