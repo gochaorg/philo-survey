@@ -234,15 +234,18 @@
         "text": "Да, логика абсолютна, она управляет бытием и не зависит от человека.",
         "effects": {
           "classical_logic": 1.0,
-          "logic_constructivism": -1.0,
-          "psychologism_logic": -0.5
+          "logic_constructivism": -0.5,
+          "psychologism_logic": -0.5,
+          "postmodern_logic": -1.0
         }
       },
       {
-        "text": "Нет, логика — это просто изобретённые людьми правила языковой игры.",
+        "text": "Логика — это изобретённая человеком эффективная система правил, но объективной реальности она не принадлежит.",
         "effects": {
           "logic_constructivism": 1.0,
-          "classical_logic": -1.0
+          "classical_logic": -0.5,
+          "postmodern_logic": -0.3,
+          "psychologism_logic": -0.3
         }
       },
       {
@@ -250,7 +253,18 @@
         "effects": {
           "psychologism_logic": 1.0,
           "empirism": 0.7,
-          "classical_logic": -0.5
+          "classical_logic": -0.5,
+          "logic_constructivism": -0.3,
+          "postmodern_logic": -0.5
+        }
+      },
+      {
+        "text": "Логика — это лишь одна из множества языковых игр, её правила условны и не имеют универсальной истинности.",
+        "effects": {
+          "postmodern_logic": 1.0,
+          "classical_logic": -1.0,
+          "logic_constructivism": -0.5,
+          "psychologism_logic": -0.5
         }
       }
     ]
@@ -259,20 +273,86 @@
     "id": "q_logic_2",
     "section": "logic",
     "text": "Способны ли животные, не владеющие языком, мыслить логически?",
-    "type": "binary",
+    "type": "single",
     "options": [
       {
-        "text": "Да, базовые законы мышления едины для любого разума и не зависят от языка.",
+        "text": "Да, логика — это универсальный закон бытия, и животные инстинктивно ему следуют.",
         "effects": {
-          "classical_logic": 0.9,
-          "psychologism_logic": 0.9
+          "classical_logic": 1.0,
+          "psychologism_logic": 0.5,
+          "logic_constructivism": -0.5,
+          "postmodern_logic": -0.8
         }
       },
       {
-        "text": "Нет, логика требует символов и языка, это исключительно человеческий конструкт.",
+        "text": "Да, логическое мышление — продукт работы мозга, и у животных есть сходные когнитивные механизмы.",
+        "effects": {
+          "psychologism_logic": 1.0,
+          "classical_logic": -0.3,
+          "logic_constructivism": -0.5,
+          "postmodern_logic": -0.5
+        }
+      },
+      {
+        "text": "Нет, логика — это социальный конструкт, набор правил, выработанных человечеством, и без общества её нет.",
         "effects": {
           "logic_constructivism": 1.0,
-          "classical_logic": -0.5
+          "classical_logic": -0.5,
+          "psychologism_logic": -0.5,
+          "postmodern_logic": 0.3
+        }
+      },
+      {
+        "text": "Нет, логика — это условная языковая игра, не имеющая аналогов у животных, так как она зависит от дискурса.",
+        "effects": {
+          "postmodern_logic": 1.0,
+          "classical_logic": -0.8,
+          "psychologism_logic": -0.5,
+          "logic_constructivism": -0.3
+        }
+      }
+    ]
+  },
+  {
+    "id": "q_logic_3",
+    "section": "logic",
+    "text": "Могли бы логические законы быть иными у инопланетян или измениться с эволюцией человека?",
+    "type": "single",
+    "options": [
+      {
+        "text": "Нет, законы логики универсальны и одинаковы для любого разумного существа во Вселенной.",
+        "effects": {
+          "classical_logic": 1.0,
+          "psychologism_logic": -0.7,
+          "logic_constructivism": -0.7,
+          "postmodern_logic": -0.9
+        }
+      },
+      {
+        "text": "Да, если мозг устроен иначе, то и логические правила могут быть другими — они порождаются когнитивной системой.",
+        "effects": {
+          "psychologism_logic": 1.0,
+          "classical_logic": -0.8,
+          "logic_constructivism": -0.3,
+          "postmodern_logic": -0.3
+        }
+      },
+      {
+        "text": "Да, логика — это эффективный инструмент, созданный людьми, и другая цивилизация могла бы создать иной, но равно работающий инструмент.",
+        "effects": {
+          "logic_constructivism": 1.0,
+          "classical_logic": -0.5,
+          "psychologism_logic": -0.3,
+          "postmodern_logic": 0.2
+        }
+      },
+      {
+        "text": "Да, логика — это культурно-историческая конструкция, и разные сообщества создают свои «правила игры» в познании.",
+        "effects": {
+          "postmodern_logic": 1.0,
+          "classical_logic": -0.8,
+          "psychologism_logic": -0.5,
+          "logic_constructivism": -0.3
         }
       }
     ]
@@ -841,51 +921,33 @@
       {
         "text": "Смысл всегда ситуативен и зависит от языковой игры; «точный перевод» — иллюзия.",
         "effects": {
-          "linguistic_structuralism": 1.0,
-          "linguistic_relativism": 0.5,
-          "logic_constructivism": 0.4
+          "postmodern_logic": 1.0,
+          "linguistic_structuralism": 0.5,
+          "logic_constructivism": 0.3
         }
       }
     ]
   },
   {
-    "id": "q_language_3",
-    "section": "language",
-    "text": "Что первично: язык или реальность?",
-    "type": "single",
-    "options": [
-      {
-        "text": "Реальность первична и объективна, язык лишь описывает её структуры.",
-        "effects": {
-          "linguistic_universalism": 1.0,
-          "materialism": 0.5,
-          "correspondence_truth": 0.5,
-          "linguistic_relativism": -0.8,
-          "linguistic_structuralism": -0.7
-        }
-      },
-      {
-        "text": "Язык активно формирует ту реальность, в которой мы живём; без языка нет расчленённого мира.",
-        "effects": {
-          "linguistic_relativism": 1.0,
-          "idealism": 0.4,
-          "logic_constructivism": 0.5,
-          "linguistic_universalism": -0.8,
-          "materialism": -0.3
-        }
-      },
-      {
-        "text": "Язык и реальность — части единой знаковой системы; вопрос о первичности некорректен, всё есть текст.",
-        "effects": {
-          "linguistic_structuralism": 1.0,
-          "nominalism": 0.5,
-          "relativism_truth": 0.4,
-          "linguistic_universalism": -0.7,
-          "correspondence_truth": -0.4
-        }
-      }
-    ]
-  },
+  "id": "q_language_3",
+  "section": "language",
+  "text": "Что первично: язык или реальность?",
+  "type": "single",
+  "options": [
+    {
+      "text": "Реальность первична и объективна, язык лишь описывает её структуры.",
+      "effects": { "linguistic_universalism": 1.0, "materialism": 0.5, "correspondence_truth": 0.5, "linguistic_relativism": -0.8, "linguistic_structuralism": -0.7 }
+    },
+    {
+      "text": "Язык активно формирует ту реальность, в которой мы живём; без языка нет расчленённого мира.",
+      "effects": { "linguistic_relativism": 1.0, "idealism": 0.4, "logic_constructivism": 0.5, "postmodern_logic": 0.3, "linguistic_universalism": -0.8, "materialism": -0.3 }
+    },
+    {
+      "text": "Язык и реальность — части единой знаковой системы; вопрос о первичности некорректен, всё есть текст.",
+      "effects": { "linguistic_structuralism": 1.0, "nominalism": 0.5, "relativism_truth": 0.4, "linguistic_universalism": -0.7, "correspondence_truth": -0.4 }
+    }
+  ]
+},
   {
     "id": "q_language_4",
     "section": "language",
@@ -923,42 +985,25 @@
     ]
   },
   {
-    "id": "q_language_5",
-    "section": "language",
-    "text": "Существуют ли объективные истины, независимые от человеческого языка?",
-    "type": "single",
-    "options": [
-      {
-        "text": "Да, истина существует вне языка, язык лишь средство её выразить.",
-        "effects": {
-          "linguistic_universalism": 1.0,
-          "correspondence_truth": 0.8,
-          "classical_logic": 0.5,
-          "linguistic_relativism": -0.9,
-          "relativism_truth": -0.6
-        }
-      },
-      {
-        "text": "Нет, истина всегда формулируется на конкретном языке и несёт его отпечаток.",
-        "effects": {
-          "linguistic_relativism": 1.0,
-          "relativism_truth": 0.7,
-          "linguistic_universalism": -0.8,
-          "correspondence_truth": -0.5
-        }
-      },
-      {
-        "text": "Истина — это свойство высказываний внутри языковой игры; вне игры понятие истины бессмысленно.",
-        "effects": {
-          "linguistic_structuralism": 1.0,
-          "pragmatic_truth": 0.5,
-          "logic_constructivism": 0.4,
-          "correspondence_truth": -0.6,
-          "linguistic_universalism": -0.5
-        }
-      }
-    ]
-  },
+  "id": "q_language_5",
+  "section": "language",
+  "text": "Существуют ли объективные истины, независимые от человеческого языка?",
+  "type": "single",
+  "options": [
+    {
+      "text": "Да, истина существует вне языка, язык лишь средство её выразить.",
+      "effects": { "linguistic_universalism": 1.0, "correspondence_truth": 0.8, "classical_logic": 0.5, "linguistic_relativism": -0.9, "relativism_truth": -0.6 }
+    },
+    {
+      "text": "Нет, истина всегда формулируется на конкретном языке и несёт его отпечаток.",
+      "effects": { "linguistic_relativism": 1.0, "relativism_truth": 0.7, "linguistic_universalism": -0.8, "correspondence_truth": -0.5 }
+    },
+    {
+      "text": "Истина — это свойство высказываний внутри языковой игры; вне игры понятие истины бессмысленно.",
+      "effects": { "postmodern_logic": 1.0, "linguistic_structuralism": 0.5, "pragmatic_truth": 0.3, "logic_constructivism": 0.2, "correspondence_truth": -0.6, "linguistic_universalism": -0.5 }
+    }
+  ]
+},
   {
     "id": "q_language_6",
     "section": "language",

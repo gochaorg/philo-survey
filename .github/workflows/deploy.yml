@@ -1,0 +1,30 @@
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches:
+      - main # Укажите вашу основную ветку
+
+permissions:
+  contents: write
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Inject Commit ID
+        run: |
+          # Получаем короткий SHA (7 символов)
+          SHORT_SHA=$(git rev-parse --short HEAD)
+          # Заменяем плейсхолдер во всех файлах .html и .js
+          sed -i "s/{{COMMIT_SHA}}/$SHORT_SHA/g" index.html
+          # Если файлов много, можно использовать: sed -i "s/{{COMMIT_SHA}}/$SHORT_SHA/g" *.html *.js
+
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: . # Папка с вашим сайтом
