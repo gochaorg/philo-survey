@@ -1,0 +1,1206 @@
+[
+  {
+    "id": "q_ontology_1",
+    "section": "ontology",
+    "text": "Если бы человечество исчезло, продолжали бы существовать законы физики, планеты и звёзды в том же виде?",
+    "type": "binary",
+    "options": [
+      {
+        "text": "Да, мир материален и существует независимо от наблюдателя.",
+        "effects": {
+          "materialism": 1.0,
+          "idealism": -1.0
+        }
+      },
+      {
+        "text": "Нет, реальность создаётся восприятием, без сознания мира нет.",
+        "effects": {
+          "idealism": 1.0,
+          "materialism": -1.0
+        }
+      }
+    ]
+  },
+  {
+    "id": "q_ontology_2",
+    "section": "ontology",
+    "text": "Существуют ли такие понятия, как число «7» или «справедливость» сами по себе в объективной реальности?",
+    "type": "binary",
+    "options": [
+      {
+        "text": "Да, математические и абстрактные законы существуют объективно.",
+        "effects": {
+          "platonism": 1.0,
+          "nominalism": -1.0
+        }
+      },
+      {
+        "text": "Нет, это просто выдуманные людьми ярлыки и слова для удобства.",
+        "effects": {
+          "nominalism": 1.0,
+          "platonism": -1.0
+        }
+      }
+    ]
+  },
+  {
+    "id": "q_ontology_3",
+    "section": "ontology",
+    "text": "Можем ли мы быть абсолютно уверены, что внешний мир не является иллюзией или сном?",
+    "type": "single",
+    "options": [
+      {
+        "text": "Да, чувственный опыт и практика доказывают реальность материи.",
+        "effects": {
+          "materialism": 1.0,
+          "empirism": 0.5,
+          "skepticism": -0.8
+        }
+      },
+      {
+        "text": "Нет, мы можем быть уверены только в собственном сознании.",
+        "effects": {
+          "idealism": 1.0,
+          "skepticism": 0.8,
+          "materialism": -0.5
+        }
+      },
+      {
+        "text": "Внешний мир существует, но познаём мы его через врождённые идеи разума.",
+        "effects": {
+          "rationalism": 1.0,
+          "platonism": 0.7,
+          "empirism": -0.5
+        }
+      }
+    ]
+  },
+  {
+    "id": "q_epistemology_1",
+    "section": "epistemology",
+    "text": "Каким образом мы можем получить по-настоящему надёжное знание о Вселенной?",
+    "type": "single",
+    "options": [
+      {
+        "text": "Исключительно через научные эксперименты, наблюдения и сбор данных.",
+        "effects": {
+          "empirism": 1.0,
+          "scientism": 0.8,
+          "rationalism": -0.5
+        }
+      },
+      {
+        "text": "Чистым логическим размышлением, математикой и анализом фундаментальных истин.",
+        "effects": {
+          "rationalism": 1.0,
+          "platonism": 0.5,
+          "empirism": -0.5
+        }
+      },
+      {
+        "text": "Никак, человеческий разум слишком ограничен, и мы никогда не узнаем истину.",
+        "effects": {
+          "skepticism": 1.0,
+          "scientism": -1.0,
+          "empirism": -0.5
+        }
+      }
+    ]
+  },
+  {
+    "id": "q_epistemology_2",
+    "section": "epistemology",
+    "text": "Имеет ли наука монополию на истину, или религия, искусство и философия дают столь же ценные знания?",
+    "type": "binary",
+    "options": [
+      {
+        "text": "Научный метод — единственный строгий и объективный источник истины.",
+        "effects": {
+          "scientism": 1.0,
+          "empirism": 0.5,
+          "skepticism": -0.8
+        }
+      },
+      {
+        "text": "Наука изучает лишь материальное, другие сферы познания не менее важны.",
+        "effects": {
+          "scientism": -1.0,
+          "idealism": 0.5
+        }
+      }
+    ]
+  },
+  {
+    "id": "q_epistemology_3",
+    "section": "epistemology",
+    "text": "Откуда берутся математические истины, например, 2 + 2 = 4?",
+    "type": "single",
+    "options": [
+      {
+        "text": "Из обобщения наблюдаемых закономерностей реального мира.",
+        "effects": {
+          "empirism": 1.0,
+          "nominalism": 0.5,
+          "platonism": -0.5
+        }
+      },
+      {
+        "text": "Из вечных идей и абстрактных сущностей, постигаемых разумом.",
+        "effects": {
+          "platonism": 1.0,
+          "rationalism": 0.8,
+          "empirism": -0.5
+        }
+      },
+      {
+        "text": "Это формальные правила, которые мы сами изобрели для описания мира.",
+        "effects": {
+          "logic_constructivism": 1.0,
+          "nominalism": 0.8,
+          "platonism": -0.5
+        }
+      }
+    ]
+  },
+  {
+    "id": "q_truth_1",
+    "section": "truth",
+    "text": "Что делает какое-либо утверждение по-настоящему истинным?",
+    "type": "single",
+    "options": [
+      {
+        "text": "Его точное и проверяемое соответствие твёрдым физическим фактам.",
+        "effects": {
+          "correspondence_truth": 1.0,
+          "relativism_truth": -1.0
+        }
+      },
+      {
+        "text": "Его практическая польза — истинно то, что помогает нам эффективно действовать.",
+        "effects": {
+          "pragmatic_truth": 1.0,
+          "utilitarianism": 0.5
+        }
+      },
+      {
+        "text": "Ничего, «истины» нет, есть лишь разные точки зрения и культурный контекст.",
+        "effects": {
+          "relativism_truth": 1.0,
+          "correspondence_truth": -1.0,
+          "nihilism": 0.5
+        }
+      },
+      {
+        "text": "Его логическая непротиворечивость и согласованность с системой уже доказанных знаний.",
+        "effects": {
+          "coherence_truth": 1.0,
+          "correspondence_truth": -0.3,
+          "pragmatic_truth": -0.3
+        }
+      }
+    ]
+  },
+  {
+    "id": "q_truth_2",
+    "section": "truth",
+    "text": "Может ли некое утверждение быть истинным, даже если оно абсолютно бесполезно на практике?",
+    "type": "binary",
+    "options": [
+      {
+        "text": "Да, истина не зависит от нашей выгоды — она либо соответствует реальности/логике, либо нет.",
+        "effects": {
+          "correspondence_truth": 0.8,
+          "coherence_truth": 0.8,
+          "pragmatic_truth": -0.8
+        }
+      },
+      {
+        "text": "Нет, бессмысленная и бесполезная истина — это пустой звук.",
+        "effects": {
+          "pragmatic_truth": 1.0,
+          "utilitarianism": 0.6,
+          "correspondence_truth": -0.5
+        }
+      }
+    ]
+  },
+  {
+    "id": "q_logic_1",
+    "section": "logic",
+    "text": "Являются ли базовые законы логики (например, «А не равно не-А») обязательными для устройства самой Вселенной?",
+    "type": "single",
+    "options": [
+      {
+        "text": "Да, логика абсолютна, она управляет бытием и не зависит от человека.",
+        "effects": {
+          "classical_logic": 1.0,
+          "logic_constructivism": -0.5,
+          "psychologism_logic": -0.5,
+          "postmodern_logic": -1.0
+        }
+      },
+      {
+        "text": "Логика — это изобретённая человеком эффективная система правил, но объективной реальности она не принадлежит.",
+        "effects": {
+          "logic_constructivism": 1.0,
+          "classical_logic": -0.5,
+          "postmodern_logic": -0.3,
+          "psychologism_logic": -0.3
+        }
+      },
+      {
+        "text": "Логика — это обобщение законов правильной работы человеческого мозга, данное через опыт.",
+        "effects": {
+          "psychologism_logic": 1.0,
+          "empirism": 0.7,
+          "classical_logic": -0.5,
+          "logic_constructivism": -0.3,
+          "postmodern_logic": -0.5
+        }
+      },
+      {
+        "text": "Логика — это лишь одна из множества языковых игр, её правила условны и не имеют универсальной истинности.",
+        "effects": {
+          "postmodern_logic": 1.0,
+          "classical_logic": -1.0,
+          "logic_constructivism": -0.5,
+          "psychologism_logic": -0.5
+        }
+      }
+    ]
+  },
+  {
+    "id": "q_logic_2",
+    "section": "logic",
+    "text": "Способны ли животные, не владеющие языком, мыслить логически?",
+    "type": "single",
+    "options": [
+      {
+        "text": "Да, логика — это универсальный закон бытия, и животные инстинктивно ему следуют.",
+        "effects": {
+          "classical_logic": 1.0,
+          "psychologism_logic": 0.5,
+          "logic_constructivism": -0.5,
+          "postmodern_logic": -0.8
+        }
+      },
+      {
+        "text": "Да, логическое мышление — продукт работы мозга, и у животных есть сходные когнитивные механизмы.",
+        "effects": {
+          "psychologism_logic": 1.0,
+          "classical_logic": -0.3,
+          "logic_constructivism": -0.5,
+          "postmodern_logic": -0.5
+        }
+      },
+      {
+        "text": "Нет, логика — это социальный конструкт, набор правил, выработанных человечеством, и без общества её нет.",
+        "effects": {
+          "logic_constructivism": 1.0,
+          "classical_logic": -0.5,
+          "psychologism_logic": -0.5,
+          "postmodern_logic": 0.3
+        }
+      },
+      {
+        "text": "Нет, логика — это условная языковая игра, не имеющая аналогов у животных, так как она зависит от дискурса.",
+        "effects": {
+          "postmodern_logic": 1.0,
+          "classical_logic": -0.8,
+          "psychologism_logic": -0.5,
+          "logic_constructivism": -0.3
+        }
+      }
+    ]
+  },
+  {
+    "id": "q_logic_3",
+    "section": "logic",
+    "text": "Могли бы логические законы быть иными у инопланетян или измениться с эволюцией человека?",
+    "type": "single",
+    "options": [
+      {
+        "text": "Нет, законы логики универсальны и одинаковы для любого разумного существа во Вселенной.",
+        "effects": {
+          "classical_logic": 1.0,
+          "psychologism_logic": -0.7,
+          "logic_constructivism": -0.7,
+          "postmodern_logic": -0.9
+        }
+      },
+      {
+        "text": "Да, если мозг устроен иначе, то и логические правила могут быть другими — они порождаются когнитивной системой.",
+        "effects": {
+          "psychologism_logic": 1.0,
+          "classical_logic": -0.8,
+          "logic_constructivism": -0.3,
+          "postmodern_logic": -0.3
+        }
+      },
+      {
+        "text": "Да, логика — это эффективный инструмент, созданный людьми, и другая цивилизация могла бы создать иной, но равно работающий инструмент.",
+        "effects": {
+          "logic_constructivism": 1.0,
+          "classical_logic": -0.5,
+          "psychologism_logic": -0.3,
+          "postmodern_logic": 0.2
+        }
+      },
+      {
+        "text": "Да, логика — это культурно-историческая конструкция, и разные сообщества создают свои «правила игры» в познании.",
+        "effects": {
+          "postmodern_logic": 1.0,
+          "classical_logic": -0.8,
+          "psychologism_logic": -0.5,
+          "logic_constructivism": -0.3
+        }
+      }
+    ]
+  },
+  {
+    "id": "q_mind_1",
+    "section": "mind",
+    "text": "Если в будущем создать робота, идеально имитирующего чувства, боль и радость, будет ли он действительно «живым» внутри?",
+    "type": "single",
+    "options": [
+      {
+        "text": "Да, если система выполняет все функции мозга, у неё есть сознание.",
+        "effects": {
+          "functionalism": 1.0,
+          "physicalism": 0.7,
+          "dualism_mind": -0.8
+        }
+      },
+      {
+        "text": "Нет, он останется бездушным калькулятором; сознание требует живой души или биологии.",
+        "effects": {
+          "dualism_mind": 0.8,
+          "functionalism": -1.0
+        }
+      },
+      {
+        "text": "Да, ведь сознание — базовое свойство материи, и любая сложная система будет им обладать.",
+        "effects": {
+          "panpsychism": 1.0,
+          "functionalism": 0.5,
+          "dualism_mind": -0.5
+        }
+      }
+    ]
+  },
+  {
+    "id": "q_mind_2",
+    "section": "mind",
+    "text": "Что такое наши мысли, чувства и субъективное «Я» с точки зрения науки?",
+    "type": "single",
+    "options": [
+      {
+        "text": "Это исключительно электрохимические процессы в нейронах нашего мозга.",
+        "effects": {
+          "physicalism": 1.0,
+          "materialism": 0.8,
+          "dualism_mind": -1.0
+        }
+      },
+      {
+        "text": "Это нематериальная сущность (дух/разум), временно привязанная к телу.",
+        "effects": {
+          "dualism_mind": 1.0,
+          "idealism": 0.7,
+          "physicalism": -1.0
+        }
+      },
+      {
+        "text": "Базовая способность чувствовать присуща всем элементарным частицам Вселенной.",
+        "effects": {
+          "panpsychism": 1.0,
+          "physicalism": -0.5
+        }
+      }
+    ]
+  },
+  {
+    "id": "q_mind_3",
+    "section": "mind",
+    "text": "Если инопланетяне с совершенно иной биохимией демонстрируют разумное поведение и эмпатию, обладают ли они сознанием?",
+    "type": "single",
+    "options": [
+      {
+        "text": "Да, если их мозг (или его аналог) выполняет те же вычислительные функции, что и наш, — сознание идентично.",
+        "effects": {
+          "functionalism": 1.0,
+          "physicalism": 0.3,
+          "dualism_mind": -0.8
+        }
+      },
+      {
+        "text": "Нет, сознание порождается строго определёнными биологическими процессами (нейроны, химия), и другая биохимия может не давать квалиа.",
+        "effects": {
+          "physicalism": 1.0,
+          "functionalism": -0.5,
+          "panpsychism": -0.5
+        }
+      },
+      {
+        "text": "Нет, подлинное сознание — нематериальная душа, а поведение не доказывает её присутствия у инопланетян.",
+        "effects": {
+          "dualism_mind": 1.0,
+          "functionalism": -0.5,
+          "physicalism": -0.5
+        }
+      },
+      {
+        "text": "Да, потому что способность чувствовать вшита во всю материю, так что любая сложная система будет обладать сознанием.",
+        "effects": {
+          "panpsychism": 1.0,
+          "physicalism": -0.3,
+          "dualism_mind": -0.5
+        }
+      }
+    ]
+  },
+  {
+    "id": "q_determinism_1",
+    "section": "determinism",
+    "text": "Суперкомпьютер знает положение всех частиц в момент вашего рождения. Мог бы он со 100% точностью предсказать ваш сегодняшний выбор на обед?",
+    "type": "binary",
+    "options": [
+      {
+        "text": "Да, мозг подчинён законам физики, свобода воли — иллюзия.",
+        "effects": {
+          "hard_determinism": 1.0,
+          "libertarianism_will": -1.0,
+          "compatibilism": -0.5
+        }
+      },
+      {
+        "text": "Нет, человеческий выбор принципиально свободен и не просчитывается.",
+        "effects": {
+          "libertarianism_will": 1.0,
+          "hard_determinism": -1.0,
+          "compatibilism": -0.5
+        }
+      }
+    ]
+  },
+  {
+    "id": "q_determinism_2",
+    "section": "determinism",
+    "text": "Можно ли считать преступника морально виновным, если его поступки полностью предопределены генетикой и тяжёлым детством?",
+    "type": "binary",
+    "options": [
+      {
+        "text": "Да, человек отвечает за поступки, если его не принуждали силой.",
+        "effects": {
+          "compatibilism": 1.0,
+          "hard_determinism": -0.3
+        }
+      },
+      {
+        "text": "Нет, без истинной свободы воли наказание — это социальная инженерия, а не вина.",
+        "effects": {
+          "hard_determinism": 0.8,
+          "compatibilism": -0.8
+        }
+      }
+    ]
+  },
+  {
+    "id": "q_determinism_3",
+    "section": "determinism",
+    "text": "Если бы вы могли вернуться в прошлое в ту же самую ситуацию, смогли бы вы поступить иначе?",
+    "type": "single",
+    "options": [
+      {
+        "text": "Да, я абсолютно свободен выбирать, и прошлый выбор не предопределён.",
+        "effects": {
+          "libertarianism_will": 1.0,
+          "hard_determinism": -1.0
+        }
+      },
+      {
+        "text": "Нет, всё предопределено цепью причин, я поступил бы точно так же.",
+        "effects": {
+          "hard_determinism": 1.0,
+          "libertarianism_will": -1.0
+        }
+      },
+      {
+        "text": "Я поступил бы так же при полной идентичности условий, но это и есть свобода — действовать без внешнего принуждения.",
+        "effects": {
+          "compatibilism": 1.0,
+          "hard_determinism": -0.5
+        }
+      }
+    ]
+  },
+  {
+    "id": "q_ethics_1",
+    "section": "ethics",
+    "text": "Вам нужно спасти 5 человек, пожертвовав жизнью 1 невинного. Какое решение будет морально верным?",
+    "type": "single",
+    "options": [
+      {
+        "text": "Пожертвовать одним: правильный поступок измеряется максимальной пользой для большинства.",
+        "effects": {
+          "utilitarianism": 1.0,
+          "deontology": -1.0,
+          "collectivism": 0.5,
+          "virtue_ethics": -0.5
+        }
+      },
+      {
+        "text": "Нельзя убивать невинного ни при каких условиях: есть абсолютные правила, которые нельзя нарушать.",
+        "effects": {
+          "deontology": 1.0,
+          "utilitarianism": -1.0,
+          "individualism": 0.4,
+          "virtue_ethics": -0.3
+        }
+      },
+      {
+        "text": "Важны не столько расчёты или слепые правила, сколько развитие морального характера: добродетельный человек не стал бы играть в такие расчёты.",
+        "effects": {
+          "virtue_ethics": 1.0,
+          "utilitarianism": -0.5,
+          "deontology": -0.5,
+          "constructivism_values": 0.4
+        }
+      }
+    ]
+  },
+  {
+    "id": "q_ethics_2",
+    "section": "ethics",
+    "text": "Можно ли считать человека по-настоящему нравственным, если он совершает добрые поступки исключительно из страха наказания?",
+    "type": "single",
+    "options": [
+      {
+        "text": "Да, главное — результат, даже если мотив корыстный.",
+        "effects": {
+          "utilitarianism": 1.0,
+          "virtue_ethics": -1.0
+        }
+      },
+      {
+        "text": "Нет, важен чистый мотив долга, а не страх.",
+        "effects": {
+          "deontology": 1.0,
+          "utilitarianism": -0.5,
+          "virtue_ethics": 0.2
+        }
+      },
+      {
+        "text": "Нет, подлинная нравственность растёт из внутренних добродетелей, а не из страха или расчёта.",
+        "effects": {
+          "virtue_ethics": 1.0,
+          "deontology": -0.3,
+          "utilitarianism": -0.5
+        }
+      }
+    ]
+  },
+  {
+    "id": "q_values_1",
+    "section": "values",
+    "text": "Существуют ли понятия добра, зла и прав человека объективно?",
+    "type": "single",
+    "options": [
+      {
+        "text": "Они объективны и абсолютны. Убийство или рабство — зло всегда и для всех.",
+        "effects": {
+          "value_objectivism": 1.0,
+          "nihilism": -1.0,
+          "deontology": 0.5
+        }
+      },
+      {
+        "text": "Они полностью субъективны, выдуманы людьми и меняются от эпохи к эпохе.",
+        "effects": {
+          "nihilism": 1.0,
+          "value_objectivism": -1.0,
+          "relativism_truth": 0.6
+        }
+      },
+      {
+        "text": "Ценности создаются людьми и обществом, но от этого они не фикция, а важнейшая основа нашей общей жизни.",
+        "effects": {
+          "constructivism_values": 1.0,
+          "value_objectivism": -0.5,
+          "nihilism": -0.7,
+          "pragmatic_truth": 0.3
+        }
+      }
+    ]
+  },
+  {
+    "id": "q_values_2",
+    "section": "values",
+    "text": "Являются ли права человека священными и неотъемлемыми?",
+    "type": "single",
+    "options": [
+      {
+        "text": "Да, это объективный моральный закон, данный природой или высшим разумом.",
+        "effects": {
+          "value_objectivism": 1.0,
+          "deontology": 0.7,
+          "constructivism_values": -0.5
+        }
+      },
+      {
+        "text": "Нет, это эффективная социальная конструкция, которую мы выбрали, чтобы жить лучше.",
+        "effects": {
+          "constructivism_values": 1.0,
+          "utilitarianism": 0.5,
+          "value_objectivism": -0.5
+        }
+      },
+      {
+        "text": "Права человека — фикция, просто красивые слова, реально правит сила.",
+        "effects": {
+          "nihilism": 1.0,
+          "value_objectivism": -1.0,
+          "constructivism_values": -0.5
+        }
+      }
+    ]
+  },
+  {
+    "id": "q_social_1",
+    "section": "social",
+    "text": "Что должно быть главным приоритетом для справедливого государства?",
+    "type": "binary",
+    "options": [
+      {
+        "text": "Абсолютная свобода личности, защита частной собственности и личных прав.",
+        "effects": {
+          "individualism": 1.0,
+          "collectivism": -1.0
+        }
+      },
+      {
+        "text": "Общее благосостояние, социальное равенство и интересы всего общества.",
+        "effects": {
+          "collectivism": 1.0,
+          "individualism": -1.0,
+          "utilitarianism": 0.5
+        }
+      }
+    ]
+  },
+  {
+    "id": "q_social_2",
+    "section": "social",
+    "text": "Кто должен иметь решающий голос при принятии сложных государственных и экономических решений?",
+    "type": "binary",
+    "options": [
+      {
+        "text": "Исключительно профильные эксперты, учёные и профессионалы в своей области.",
+        "effects": {
+          "epistocracy": 1.0,
+          "democratism": -1.0,
+          "scientism": 0.5
+        }
+      },
+      {
+        "text": "Все граждане без исключения на равных условиях через демократические институты.",
+        "effects": {
+          "democratism": 1.0,
+          "epistocracy": -1.0
+        }
+      }
+    ]
+  },
+  {
+    "id": "q_social_3",
+    "section": "social",
+    "text": "Следует ли выносить сложные научные вопросы (ГМО, вакцинация, ядерная энергия) на всенародные референдумы?",
+    "type": "single",
+    "options": [
+      {
+        "text": "Нет, это опасно, такие решения должны принимать только учёные и эксперты.",
+        "effects": {
+          "epistocracy": 1.0,
+          "scientism": 0.7,
+          "democratism": -1.0
+        }
+      },
+      {
+        "text": "Да, каждый гражданин имеет право решать за себя и свою семью.",
+        "effects": {
+          "democratism": 1.0,
+          "individualism": 0.6,
+          "epistocracy": -0.8
+        }
+      },
+      {
+        "text": "Общество должно обсуждать, но окончательное решение за избранными представителями, опирающимися на науку.",
+        "effects": {
+          "epistocracy": 0.5,
+          "democratism": 0.5,
+          "compatibilism": 0.3
+        }
+      }
+    ]
+  },
+  {
+    "id": "q_aesthetics_1",
+    "section": "aesthetics",
+    "text": "Почему вам может нравиться закат или симфония? Выберите наиболее точную причину.",
+    "type": "single",
+    "options": [
+      {
+        "text": "Потому что они доставляют мне чистое чувственное удовольствие, это приятно моим органам чувств.",
+        "effects": {
+          "aesthetic_hedonism": 1.0,
+          "aesthetic_objectivism": -0.3,
+          "semiotic_aesthetics": -0.5
+        }
+      },
+      {
+        "text": "Потому что я проецирую на них свои эмоции, они резонируют с моим внутренним состоянием.",
+        "effects": {
+          "aesthetic_emotivism": 1.0,
+          "aesthetic_hedonism": -0.3,
+          "aesthetic_objectivism": -0.4
+        }
+      },
+      {
+        "text": "Потому что в них есть объективная гармония, пропорции, математическая правильность формы.",
+        "effects": {
+          "aesthetic_objectivism": 1.0,
+          "aesthetic_hedonism": -0.4,
+          "semiotic_aesthetics": -0.3
+        }
+      },
+      {
+        "text": "Потому что я «читаю» их как текст: цвета и звуки складываются в культурные знаки, вызывая многослойные ассоциации.",
+        "effects": {
+          "semiotic_aesthetics": 1.0,
+          "aesthetic_constructivism": 0.5,
+          "aesthetic_hedonism": -0.5
+        }
+      }
+    ]
+  },
+  {
+    "id": "q_aesthetics_2",
+    "section": "aesthetics",
+    "text": "Можно ли объективно утверждать, что «Мона Лиза» прекраснее рисунка пятилетнего ребёнка?",
+    "type": "single",
+    "options": [
+      {
+        "text": "Да, потому что в «Моне Лизе» соблюдены объективные законы композиции и мастерства, доказанные веками.",
+        "effects": {
+          "aesthetic_objectivism": 1.0,
+          "aesthetic_constructivism": 0.3,
+          "semiotic_aesthetics": -0.4
+        }
+      },
+      {
+        "text": "Нет, потому что для кого-то детский рисунок может быть приятнее и вызывать больше положительных эмоций.",
+        "effects": {
+          "aesthetic_hedonism": 1.0,
+          "aesthetic_emotivism": 0.6,
+          "aesthetic_objectivism": -0.6
+        }
+      },
+      {
+        "text": "Нет, потому что красота не в объекте, а в тех смыслах, которые мы вчитываем: «Мона Лиза» значима только внутри нашей культурной системы знаков.",
+        "effects": {
+          "semiotic_aesthetics": 1.0,
+          "aesthetic_constructivism": 0.7,
+          "aesthetic_objectivism": -0.5
+        }
+      },
+      {
+        "text": "Да, но только потому, что так решили эксперты и история искусства — это вопрос договорённостей внутри институций.",
+        "effects": {
+          "aesthetic_constructivism": 1.0,
+          "aesthetic_objectivism": 0.3,
+          "semiotic_aesthetics": 0.3
+        }
+      }
+    ]
+  },
+  {
+    "id": "q_aesthetics_3",
+    "section": "aesthetics",
+    "text": "Представьте, что вы смотрите на абстрактную картину, которая не вызывает у вас никаких эмоций и кажется «мазнёй». Может ли она всё-таки быть великим искусством?",
+    "type": "single",
+    "options": [
+      {
+        "text": "Нет, если она не доставляет удовольствия или не трогает чувства, это просто плохое искусство.",
+        "effects": {
+          "aesthetic_hedonism": 0.7,
+          "aesthetic_emotivism": 0.7,
+          "semiotic_aesthetics": -0.6,
+          "aesthetic_constructivism": -0.5
+        }
+      },
+      {
+        "text": "Да, если она построена по строгим формальным законам цвета и ритма, даже если я их не чувствую.",
+        "effects": {
+          "aesthetic_objectivism": 1.0,
+          "aesthetic_hedonism": -0.5,
+          "aesthetic_emotivism": -0.5
+        }
+      },
+      {
+        "text": "Да, если она создаёт новый визуальный язык, и понимание придёт позже, через интерпретацию и знание контекста.",
+        "effects": {
+          "semiotic_aesthetics": 1.0,
+          "aesthetic_constructivism": 0.6,
+          "aesthetic_hedonism": -0.4
+        }
+      },
+      {
+        "text": "Только если арт-институции (музеи, критика) признают её шедевром — тогда она им станет.",
+        "effects": {
+          "aesthetic_constructivism": 1.0,
+          "semiotic_aesthetics": 0.4,
+          "aesthetic_hedonism": -0.5
+        }
+      }
+    ]
+  },
+  {
+    "id": "q_language_1",
+    "section": "language",
+    "text": "Что первично: мышление или язык?",
+    "type": "single",
+    "options": [
+      {
+        "text": "Мышление предшествует языку, язык лишь инструмент для выражения готовых мыслей.",
+        "effects": {
+          "linguistic_universalism": 1.0,
+          "linguistic_relativism": -1.0,
+          "linguistic_structuralism": -0.8
+        }
+      },
+      {
+        "text": "Язык определяет мышление — мы мыслим словами, и без языка нет сложных понятий.",
+        "effects": {
+          "linguistic_relativism": 1.0,
+          "linguistic_universalism": -1.0,
+          "linguistic_structuralism": -0.3
+        }
+      },
+      {
+        "text": "Язык и мышление — части единой знаковой системы, которая конструирует нашу реальность.",
+        "effects": {
+          "linguistic_structuralism": 1.0,
+          "linguistic_relativism": 0.3,
+          "linguistic_universalism": -0.7
+        }
+      }
+    ]
+  },
+  {
+    "id": "q_language_2",
+    "section": "language",
+    "text": "Можно ли выразить любую мысль на любом языке без потери смысла?",
+    "type": "single",
+    "options": [
+      {
+        "text": "Да, глубинные структуры мышления одинаковы у всех людей, перевод лишь меняет внешнюю оболочку.",
+        "effects": {
+          "linguistic_universalism": 1.0,
+          "linguistic_relativism": -1.0,
+          "linguistic_structuralism": -0.5
+        }
+      },
+      {
+        "text": "Нет, каждый язык несёт уникальную картину мира, и многие смыслы непереводимы.",
+        "effects": {
+          "linguistic_relativism": 1.0,
+          "linguistic_universalism": -0.8,
+          "nominalism": 0.3
+        }
+      },
+      {
+        "text": "Смысл всегда ситуативен и зависит от языковой игры; «точный перевод» — иллюзия.",
+        "effects": {
+          "postmodern_logic": 1.0,
+          "linguistic_structuralism": 0.5,
+          "logic_constructivism": 0.3
+        }
+      }
+    ]
+  },
+  {
+  "id": "q_language_3",
+  "section": "language",
+  "text": "Что первично: язык или реальность?",
+  "type": "single",
+  "options": [
+    {
+      "text": "Реальность первична и объективна, язык лишь описывает её структуры.",
+      "effects": { "linguistic_universalism": 1.0, "materialism": 0.5, "correspondence_truth": 0.5, "linguistic_relativism": -0.8, "linguistic_structuralism": -0.7 }
+    },
+    {
+      "text": "Язык активно формирует ту реальность, в которой мы живём; без языка нет расчленённого мира.",
+      "effects": { "linguistic_relativism": 1.0, "idealism": 0.4, "logic_constructivism": 0.5, "postmodern_logic": 0.3, "linguistic_universalism": -0.8, "materialism": -0.3 }
+    },
+    {
+      "text": "Язык и реальность — части единой знаковой системы; вопрос о первичности некорректен, всё есть текст.",
+      "effects": { "linguistic_structuralism": 1.0, "nominalism": 0.5, "relativism_truth": 0.4, "linguistic_universalism": -0.7, "correspondence_truth": -0.4 }
+    }
+  ]
+},
+  {
+    "id": "q_language_4",
+    "section": "language",
+    "text": "Может ли быть полноценное мышление без языка (например, у глухонемых, не обученных языку)?",
+    "type": "single",
+    "options": [
+      {
+        "text": "Да, мышление глубже языка, это до-языковая способность разума.",
+        "effects": {
+          "linguistic_universalism": 1.0,
+          "rationalism": 0.5,
+          "dualism_mind": 0.4,
+          "linguistic_relativism": -0.8,
+          "linguistic_structuralism": -0.7
+        }
+      },
+      {
+        "text": "Нет, сложные понятия и логические операции невозможны без языковой оболочки.",
+        "effects": {
+          "linguistic_relativism": 1.0,
+          "empirism": 0.3,
+          "linguistic_universalism": -0.8,
+          "linguistic_structuralism": -0.2
+        }
+      },
+      {
+        "text": "Мышление и есть внутренний язык; даже без внешней речи работает знаковая система сознания.",
+        "effects": {
+          "linguistic_structuralism": 1.0,
+          "psychologism_logic": 0.5,
+          "linguistic_universalism": -0.4,
+          "linguistic_relativism": 0.3
+        }
+      }
+    ]
+  },
+  {
+  "id": "q_language_5",
+  "section": "language",
+  "text": "Существуют ли объективные истины, независимые от человеческого языка?",
+  "type": "single",
+  "options": [
+    {
+      "text": "Да, истина существует вне языка, язык лишь средство её выразить.",
+      "effects": { "linguistic_universalism": 1.0, "correspondence_truth": 0.8, "classical_logic": 0.5, "linguistic_relativism": -0.9, "relativism_truth": -0.6 }
+    },
+    {
+      "text": "Нет, истина всегда формулируется на конкретном языке и несёт его отпечаток.",
+      "effects": { "linguistic_relativism": 1.0, "relativism_truth": 0.7, "linguistic_universalism": -0.8, "correspondence_truth": -0.5 }
+    },
+    {
+      "text": "Истина — это свойство высказываний внутри языковой игры; вне игры понятие истины бессмысленно.",
+      "effects": { "postmodern_logic": 1.0, "linguistic_structuralism": 0.5, "pragmatic_truth": 0.3, "logic_constructivism": 0.2, "correspondence_truth": -0.6, "linguistic_universalism": -0.5 }
+    }
+  ]
+},
+  {
+    "id": "q_language_6",
+    "section": "language",
+    "text": "Влияет ли язык, на котором говорит человек, на его моральные ценности?",
+    "type": "single",
+    "options": [
+      {
+        "text": "Да, языковая картина мира формирует представления о добре и зле.",
+        "effects": {
+          "linguistic_relativism": 1.0,
+          "constructivism_values": 0.7,
+          "relativism_truth": 0.4,
+          "value_objectivism": -0.6
+        }
+      },
+      {
+        "text": "Нет, ценности объективны и универсальны для всех языков и культур.",
+        "effects": {
+          "value_objectivism": 1.0,
+          "linguistic_universalism": 0.6,
+          "classical_logic": 0.3,
+          "linguistic_relativism": -0.8,
+          "constructivism_values": -0.5
+        }
+      },
+      {
+        "text": "Язык влияет на выражение ценностей, но не на их глубинную суть, которая коренится в человеческой природе.",
+        "effects": {
+          "linguistic_universalism": 0.5,
+          "virtue_ethics": 0.4,
+          "linguistic_relativism": -0.2,
+          "constructivism_values": 0.2
+        }
+      }
+    ]
+  },
+  {
+    "id": "q_religion_1",
+    "section": "religion",
+    "text": "Что для вас означает фраза «Бог есть истина»?",
+    "type": "single",
+    "options": [
+      {
+        "text": "Истина — это живая Личность, с которой можно вступить в личное общение.",
+        "effects": {
+          "personalist_truth": 1.0,
+          "personalist_faith": 0.8,
+          "correspondence_truth": -0.6
+        }
+      },
+      {
+        "text": "Это метафора, означающая, что Бог — источник высших законов разума и бытия, доступных частичному познанию.",
+        "effects": {
+          "theological_rationalism": 1.0,
+          "personalist_truth": 0.3,
+          "rationalism": 0.5
+        }
+      },
+      {
+        "text": "Это утверждение можно принять только верой, разум здесь бессилен; истина открывается в откровении.",
+        "effects": {
+          "fideism": 1.0,
+          "personalist_truth": 0.6,
+          "rationalism": -0.5
+        }
+      },
+      {
+        "text": "Я не принимаю это утверждение; истина — это объективное знание о мире, добываемое наукой.",
+        "effects": {
+          "correspondence_truth": 0.8,
+          "scientism": 0.6,
+          "personalist_truth": -0.8
+        }
+      }
+    ]
+  },
+  {
+    "id": "q_religion_2",
+    "section": "religion",
+    "text": "Какой тип веры вам ближе?",
+    "type": "single",
+    "options": [
+      {
+        "text": "Вера — это личное доверие и отношения с Богом-личностью, как с близким другом или Отцом.",
+        "effects": {
+          "personalist_faith": 1.0,
+          "personalist_truth": 0.7,
+          "worldview_faith": -0.5
+        }
+      },
+      {
+        "text": "Вера — это принятие системы убеждений, образа жизни и пути самосовершенствования.",
+        "effects": {
+          "worldview_faith": 1.0,
+          "constructivism_values": 0.5,
+          "personalist_faith": -0.8
+        }
+      },
+      {
+        "text": "Вера — это иррациональный скачок, абсурд, которому я решаюсь довериться вопреки разуму.",
+        "effects": {
+          "fideism": 1.0,
+          "personalist_faith": 0.4,
+          "rationalism": -0.6
+        }
+      }
+    ]
+  },
+  {
+    "id": "q_religion_3",
+    "section": "religion",
+    "text": "Может ли личный духовный опыт быть источником истины?",
+    "type": "single",
+    "options": [
+      {
+        "text": "Да, это единственный путь к познанию божественного — истина открывается в мистическом переживании.",
+        "effects": {
+          "religious_experientialism": 1.0,
+          "fideism": 0.5,
+          "empirism": 0.4,
+          "scientism": -0.7
+        }
+      },
+      {
+        "text": "Да, но такой опыт должен проверяться разумом и согласовываться с традицией.",
+        "effects": {
+          "theological_rationalism": 1.0,
+          "religious_experientialism": 0.6,
+          "rationalism": 0.4
+        }
+      },
+      {
+        "text": "Нет, истина добывается только научным методом и логикой; субъективный опыт недостоверен.",
+        "effects": {
+          "scientism": 1.0,
+          "rationalism": 0.5,
+          "religious_experientialism": -0.8
+        }
+      }
+    ]
+  },
+  {
+    "id": "q_religion_4",
+    "section": "religion",
+    "text": "Согласны ли вы с утверждением: «Истина не что, а Кто»?",
+    "type": "binary",
+    "options": [
+      {
+        "text": "Да, высшая истина — это личность, с которой можно встретиться, а не формула.",
+        "effects": {
+          "personalist_truth": 1.0,
+          "personalist_faith": 0.8,
+          "correspondence_truth": -0.7
+        }
+      },
+      {
+        "text": "Нет, истина — это безличное соответствие реальности или логическая непротиворечивость.",
+        "effects": {
+          "correspondence_truth": 0.5,
+          "coherence_truth": 0.5,
+          "personalist_truth": -1.0
+        }
+      }
+    ]
+  },
+  {
+    "id": "q_religion_5",
+    "section": "religion",
+    "text": "Является ли религия прежде всего системой моральных и философских принципов, а не личной связью с Богом?",
+    "type": "single",
+    "options": [
+      {
+        "text": "Да, религия — это в первую очередь учение и образ жизни, а отношения с Богом вторичны.",
+        "effects": {
+          "worldview_faith": 1.0,
+          "constructivism_values": 0.5,
+          "personalist_faith": -0.8,
+          "personalist_truth": -0.4
+        }
+      },
+      {
+        "text": "Нет, суть религии именно в живых отношениях с Богом-личностью, а принципы лишь следствие.",
+        "effects": {
+          "personalist_faith": 1.0,
+          "personalist_truth": 0.5,
+          "worldview_faith": -0.8
+        }
+      },
+      {
+        "text": "Религия — это внутренний духовный опыт, не сводимый ни к системе, ни к личности.",
+        "effects": {
+          "religious_experientialism": 1.0,
+          "fideism": 0.3,
+          "worldview_faith": -0.5,
+          "personalist_faith": -0.3
+        }
+      }
+    ]
+  }
+]

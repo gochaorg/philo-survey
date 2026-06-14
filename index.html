@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Опросник и Граф Мировоззрения</title>
+    <style>
+        body { font-family: sans-serif; max-width: 900px; margin: 40px auto; padding: 0 20px; line-height: 1.6; background: #fafafa; color: #333; }
+        .question-block { background: #fff; padding: 20px; border-radius: 8px; border-left: 5px solid #007bff; margin-bottom: 20px; box-shadow: 0 2px 4px rgba(0,0,0,0.05); }
+        button { background: #007bff; color: white; border: none; padding: 14px 28px; font-size: 16px; border-radius: 6px; cursor: pointer; transition: 0.2s; }
+        button:hover { background: #0056b3; }
+        #results-area { margin-top: 40px; display: none; }
+        /* Контейнер для интерактивного графа */
+        #network-container { width: 100%; height: 600px; border: 1px solid #ddd; background-color: #ffffff; border-radius: 8px; margin-top: 20px; box-shadow: inset 0 0 10px rgba(0,0,0,0.05); }
+        .legend { display: flex; gap: 15px; margin-top: 10px; font-size: 14px; }
+        .legend-item { display: flex; align-items: center; gap: 5px; }
+    </style>
+    <link rel="stylesheet" href="result.css">
+    <script type="text/javascript" src="vis-network.js"></script>
+</head>
+<body>
+
+    <h1>Опросник и Граф Мировоззрения</h1>
+    
+    <p>Версия сборки: <span id="commit-id">e33ff5c</span></p>
+    
+    <form id="quiz-form">
+        <div id="quiz-container">Загрузка вопросов теста...</div>
+        <button type="submit">Рассчитать и визуализировать профиль</button>
+    </form>
+
+    <!-- Область результатов и графа -->
+    <div id="results-area">
+        <h2>Ваша карта философских позиций</h2>
+        <p>Размер узлов отражает степень вашего согласия с позицией. Зеленые связи — логическая совместимость, красные — противоречия.</p>
+        
+        <div id="network-container"></div>
+        
+        <div class="legend">
+            <div class="legend-item"><span style="display:inline-block; width:12px; height:12px; background:#f98383; border-radius:50%;"></span> Противоречит мне (<10%)</div>
+            <div class="legend-item"><span style="display:inline-block; width:12px; height:12px; background:#f8c596; border-radius:50%;"></span> Легко откажусь 10% .. 25%</div>
+            <div class="legend-item"><span style="display:inline-block; width:12px; height:12px; background:#e1f954; border-radius:50%;"></span> Почти уверен 25% .. 50%</div>
+            <div class="legend-item"><span style="display:inline-block; width:12px; height:12px; background:#e8f47a; border-radius:50%;"></span> Есть о чем по дискутировать 50% .. 75%</div>
+            <div class="legend-item"><span style="display:inline-block; width:12px; height:12px; background:#765eb3; border-radius:50%;"></span> Бестолку со мной о этом спорить 75% .. 100%</div>
+        </div>
+
+        <div id="position-values">
+        </div>
+    </div>
+
+    <div id="controlPanel">
+    </div>
+
+    <!-- Подключаем наш скрипт -->
+    <script src="script.js"></script>
+</body>
+</html>
